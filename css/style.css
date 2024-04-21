@@ -79,6 +79,10 @@ body {
   margin: 0 0 0 0;
   padding-right: 16px;
 }
+.cart img {
+  max-width: 40px !important;
+  max-height: 40px !important;
+}
 
 .menu-logo img {
   max-height: 90px;
@@ -265,7 +269,8 @@ body {
     border: white solid 1px;
   }
 }
-/*TODO: -center things in header 
+/*TODO: -Try to make new branch if needed
+		    -center things in header 
         -add shopping cart icon
         -login/register (take from adVize)
         -make gallery cuz ez if u get pics
