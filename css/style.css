@@ -28,7 +28,7 @@ a .btn {
   font-size: 30px;
   color: white;
   padding: 7px 20px 1px 20px;
-  border: solid 0.1px #000000;
+  border: solid 0.1px white;
   box-shadow: rgb(0, 0, 0) 0px 9px 28px -2px;
   border-radius: 21px;
   transition: 613ms;
@@ -40,7 +40,7 @@ a .btn:hover {
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
   color: white;
-  border: solid 1px #000000;
+  border: solid 1px white;
   background-position: bottom;
 }
 
@@ -79,6 +79,12 @@ body {
   margin: 0 0 0 0;
   padding-right: 16px;
 }
+.Klogo {
+  border: rgba(0, 0, 0, 0) solid !important;
+}
+.Klogo:hover {
+  border: rgba(0, 0, 0, 0) solid !important;
+}
 .cart img {
   max-width: 40px !important;
   max-height: 40px !important;
@@ -92,16 +98,17 @@ body {
   background-color: rgb(0, 40, 87);
   border-radius: 10px;
   padding: 5px;
+  border: #0c7cde00 solid !important;
 }
 
 .menu-container a {
   text-decoration: none;
-  color: #000000;
+  color: white;
   transition: color 0.3s ease;
-}
+  transition: 0.5s;
+  border-radius: 15px;
 
-.menu-container a:hover {
-  /* color: #09a5ff; */
+  padding: 8px;
 }
 
 .menu-container input {
@@ -142,7 +149,7 @@ body {
 .menu-container input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(3px, -1px);
-  background: black;
+  background: rgb(255, 255, 255);
 }
 
 .menu-container input:checked ~ span:nth-child(4) {
@@ -165,9 +172,20 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  .menu-container a {
+    border-radius: 15px;
+    border: rgb(0, 40, 87) solid 1px;
+    transition: 0.5s;
+  }
+  .menu-container a:hover {
+    border-radius: 15px;
+    border: white solid 1px;
+  }
+
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
+    border: rgb(0, 40, 87) solid 1px;
   }
 
   .menu-logo {
@@ -178,8 +196,16 @@ body {
   }
 
   .menu-logo img {
-    max-height: 30px;
+    max-height: 80px;
+    max-width: 80px;
+    flex-shrink: 0;
+    padding: 1px;
+    background-color: rgba(0, 41, 87, 0);
+    border-radius: 10px;
+    padding: 5px;
+    border: #0c7cde00 solid !important;
   }
+
   /* HBMenu */
   .menu {
     position: absolute;
@@ -189,7 +215,13 @@ body {
     top: 0;
     margin: -20px;
     padding: 75px 50px 50px;
-    background: #cdcdcd;
+    background: rgb(0, 40, 87);
+    /* background-image: linear-gradient(
+      135deg,
+      rgb(0, 40, 87) 70%,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ); */
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -206,6 +238,7 @@ body {
 @media only screen and (min-width: 768px) {
   .menu-container {
     width: 100%;
+    padding: 0px;
   }
 
   .menu-container a {
@@ -264,16 +297,15 @@ body {
     transition: 0.5s;
   }
   .menu li:hover {
-    background-position: bottom;
     border-radius: 15px;
     border: white solid 1px;
   }
 }
 /*TODO: -Try to make new branch if needed
 		    -center things in header 
-        -add shopping cart icon
+        -add shopping cart icon ✔️
         -login/register (take from adVize)
-        -make gallery cuz ez if u get pics
+        -make gallery cuz ez if u get pics 
         -make outline go away (border) on "Kuzen balıkçılık"
         -maybe change the logo a little in photoshop
         -add all sites and header + scroll Button code
