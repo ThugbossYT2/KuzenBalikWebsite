@@ -1,6 +1,7 @@
 html * {
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: rgb(16, 2, 54); */
 }
 
 /* .blankLink{
@@ -51,7 +52,7 @@ body {
   background-position: center;
   background-attachment: fixed;
 
-  height: 20000px;
+  height: 2000px;
 }
 
 .menu-container {
