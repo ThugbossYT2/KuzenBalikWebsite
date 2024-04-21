@@ -172,10 +172,14 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  .menu li {
+    border: solid rgb(0, 40, 87) !important;
+  }
   .menu-container a {
     border-radius: 15px;
     border: rgb(0, 40, 87) solid 1px;
     transition: 0.5s;
+    border-radius: 15px;
   }
   .menu-container a:hover {
     border-radius: 15px;
