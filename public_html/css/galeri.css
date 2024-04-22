@@ -5,9 +5,9 @@ html * {
 }
 
 /* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+    text-decoration: none;
+    color: black;
+  } */
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
@@ -68,11 +68,11 @@ body {
   box-sizing: border-box;
   background-color: rgb(0, 40, 87);
   /* background-image: linear-gradient(
-    to bottom,
-    rgb(0, 40, 87) 60%,
-    rgba(0, 134, 158, 0.692),
-    rgba(0, 0, 0, 0)
-  ); */
+      to bottom,
+      rgb(0, 40, 87) 60%,
+      rgba(0, 134, 158, 0.692),
+      rgba(0, 0, 0, 0)
+    ); */
 }
 
 .menu-logo {
@@ -173,18 +173,6 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
-  body {
-    background-image: none;
-  }
-  #background {
-    z-index: -1;
-    background-image: url(../media/images/fishCircle2.webp);
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-size: cover;
-    background-position: center;
-  }
   .menu li {
     border: solid rgb(0, 40, 87) !important;
   }
@@ -234,11 +222,11 @@ body {
     background: rgb(0, 40, 87);
     border-radius: 15px;
     /* background-image: linear-gradient(
-      135deg,
-      rgb(0, 40, 87) 70%,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ); */
+        135deg,
+        rgb(0, 40, 87) 70%,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ); */
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -286,30 +274,30 @@ body {
   }
 
   /* .menu li {
-    padding: 0 20px;
-    border-radius: 15px;
-    border: rgb(17, 2, 59) solid 2px;
-    margin: 2px;
-    background-image: linear-gradient(
-      to bottom,
-      #0c7cde,
-      rgb(16, 2, 54),
-      #0c7cde
-    );
-    background-size: 400% 250%;
-    transition: 0.3s;
-  } */
+      padding: 0 20px;
+      border-radius: 15px;
+      border: rgb(17, 2, 59) solid 2px;
+      margin: 2px;
+      background-image: linear-gradient(
+        to bottom,
+        #0c7cde,
+        rgb(16, 2, 54),
+        #0c7cde
+      );
+      background-size: 400% 250%;
+      transition: 0.3s;
+    } */
   .menu li {
     padding: 0 20px;
     border-radius: 15px;
     border: solid rgba(0, 41, 87, 0) 1px;
     margin: 2px;
     /* background-image: linear-gradient(
-      to bottom,
-      #0c7cde,
-      rgb(16, 2, 54),
-      #0c7cde
-    ); */
+        to bottom,
+        #0c7cde,
+        rgb(16, 2, 54),
+        #0c7cde
+      ); */
     background-size: 400% 250%;
     transition: 0.5s;
   }
@@ -319,12 +307,12 @@ body {
   }
 }
 /*TODO: -Try to make new branch if needed
-		    -center things in header 
-        -add shopping cart icon  ✔️
-        -login/register (take from adVize)
-        -make gallery cuz ez if u get pics 
-        -make outline go away (border) on "Kuzen balıkçılık"  
-        -maybe change the logo a little in photoshop
-        -add all sites and header + scroll Button code
-        
-*/
+              -center things in header 
+          -add shopping cart icon  ✔️
+          -login/register (take from adVize)
+          -make gallery cuz ez if u get pics 
+          -make outline go away (border) on "Kuzen balıkçılık"  
+          -maybe change the logo a little in photoshop
+          -add all sites and header + scroll Button code
+          
+  */
