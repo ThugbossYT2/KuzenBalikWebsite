@@ -173,6 +173,17 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  #mobileTitle {
+    display: block;
+    align-self: center;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    border: none;
+    top: 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
   body {
     background-image: none;
   }
@@ -190,18 +201,22 @@ body {
   }
   .menu-container a {
     border-radius: 15px;
-    border: rgb(0, 40, 87) solid 1px;
+    border: rgba(87, 0, 0, 0) solid 1px;
     transition: 0.5s;
   }
   .menu-container a:hover {
     border-radius: 15px;
     border: white solid 1px;
   }
-
+  #onFocusMobile {
+    border-radius: 15px;
+    border: rgb(255, 255, 255) solid 1px;
+    transition: 0.5s;
+  }
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
-    border: rgb(0, 40, 87) solid 1px;
+    border: rgba(87, 0, 0, 0) solid 1px;
   }
 
   .menu-logo {
@@ -252,6 +267,17 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  #desktopTitle {
+    color: white;
+    font-size: 30px;
+    border: none;
+    top: 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  #mobileTitle {
+    display: none;
+  }
   .menu-container {
     width: 100%;
     padding: 0px;
@@ -325,5 +351,6 @@ body {
         -make outline go away (border) on "Kuzen balıkçılık"  
         -maybe change the logo a little in photoshop
         -add all sites and header + scroll Button code
+        -remove logo bg
         
 */
