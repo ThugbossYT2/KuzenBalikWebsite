@@ -173,6 +173,18 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+  #background {
+    z-index: -1;
+    background-image: url(../media/images/fishCircle2.webp);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+  }
   .menu li {
     border: solid rgb(0, 40, 87) !important;
   }
