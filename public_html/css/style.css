@@ -131,7 +131,7 @@ body {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd; /*hamburger color*/
+  background: #ffffff; /*hamburger color*/
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -286,7 +286,6 @@ body {
   .menu-container a {
     color: white;
     font-size: 20px;
-    /* font-weight: */
   }
 
   .menu-container input {

@@ -5,9 +5,9 @@ html * {
 }
 
 /* .blankLink{
-    text-decoration: none;
-    color: black;
-  } */
+  text-decoration: none;
+  color: black;
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
@@ -68,11 +68,11 @@ body {
   box-sizing: border-box;
   background-color: rgb(0, 40, 87);
   /* background-image: linear-gradient(
-      to bottom,
-      rgb(0, 40, 87) 60%,
-      rgba(0, 134, 158, 0.692),
-      rgba(0, 0, 0, 0)
-    ); */
+    to bottom,
+    rgb(0, 40, 87) 60%,
+    rgba(0, 134, 158, 0.692),
+    rgba(0, 0, 0, 0)
+  ); */
 }
 
 .menu-logo {
@@ -131,7 +131,7 @@ body {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd; /*hamburger color*/
+  background: #ffffff; /*hamburger color*/
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -173,6 +173,17 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  #mobileTitle {
+    display: block;
+    align-self: center;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    border: none;
+    top: 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
   body {
     background-image: none;
   }
@@ -190,18 +201,22 @@ body {
   }
   .menu-container a {
     border-radius: 15px;
-    border: rgb(0, 40, 87) solid 1px;
+    border: rgba(87, 0, 0, 0) solid 1px;
     transition: 0.5s;
   }
   .menu-container a:hover {
     border-radius: 15px;
     border: white solid 1px;
   }
-
+  #onFocusMobile {
+    border-radius: 15px;
+    border: rgb(255, 255, 255) solid 1px;
+    transition: 0.5s;
+  }
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
-    border: rgb(0, 40, 87) solid 1px;
+    border: rgba(87, 0, 0, 0) solid 1px;
   }
 
   .menu-logo {
@@ -233,11 +248,11 @@ body {
     background: rgb(0, 40, 87);
     border-radius: 0px 0px 50px 0px;
     /* background-image: linear-gradient(
-        135deg,
-        rgb(0, 40, 87) 70%,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0)
-      ); */
+      135deg,
+      rgb(0, 40, 87) 70%,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ); */
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -252,6 +267,17 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  #desktopTitle {
+    color: white;
+    font-size: 30px;
+    border: none;
+    top: 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  #mobileTitle {
+    display: none;
+  }
   .menu-container {
     width: 100%;
     padding: 0px;
@@ -260,7 +286,6 @@ body {
   .menu-container a {
     color: white;
     font-size: 20px;
-    /* font-weight: */
   }
 
   .menu-container input {
@@ -285,30 +310,30 @@ body {
   }
 
   /* .menu li {
-      padding: 0 20px;
-      border-radius: 15px;
-      border: rgb(17, 2, 59) solid 2px;
-      margin: 2px;
-      background-image: linear-gradient(
-        to bottom,
-        #0c7cde,
-        rgb(16, 2, 54),
-        #0c7cde
-      );
-      background-size: 400% 250%;
-      transition: 0.3s;
-    } */
+    padding: 0 20px;
+    border-radius: 15px;
+    border: rgb(17, 2, 59) solid 2px;
+    margin: 2px;
+    background-image: linear-gradient(
+      to bottom,
+      #0c7cde,
+      rgb(16, 2, 54),
+      #0c7cde
+    );
+    background-size: 400% 250%;
+    transition: 0.3s;
+  } */
   .menu li {
     padding: 0 20px;
     border-radius: 15px;
     border: solid rgba(0, 41, 87, 0) 1px;
     margin: 2px;
     /* background-image: linear-gradient(
-        to bottom,
-        #0c7cde,
-        rgb(16, 2, 54),
-        #0c7cde
-      ); */
+      to bottom,
+      #0c7cde,
+      rgb(16, 2, 54),
+      #0c7cde
+    ); */
     background-size: 400% 250%;
     transition: 0.5s;
   }
@@ -318,12 +343,13 @@ body {
   }
 }
 /*TODO: -Try to make new branch if needed
-              -center things in header 
-          -add shopping cart icon  ✔️
-          -login/register (take from adVize)
-          -make gallery cuz ez if u get pics 
-          -make outline go away (border) on "Kuzen balıkçılık"  
-          -maybe change the logo a little in photoshop
-          -add all sites and header + scroll Button code
-          
-  */
+		    -center things in header 
+        -add shopping cart icon  ✔️
+        -login/register (take from adVize)
+        -make gallery cuz ez if u get pics 
+        -make outline go away (border) on "Kuzen balıkçılık"  
+        -maybe change the logo a little in photoshop
+        -add all sites and header + scroll Button code
+        -remove logo bg
+        
+*/
