@@ -341,6 +341,32 @@ body {
     border: white solid 1px;
   }
 }
+.contentBoxText p {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: -6;
+}
+.contentBox div {
+  scroll-behavior: smooth;
+  background-color: rgb(0, 40, 87);
+  height: 200px;
+  margin-top: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 20px;
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: -1;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
+}
 /*TODO: -Try to make new branch if needed
 		    -center things in header 
         -add shopping cart icon  ✔️
