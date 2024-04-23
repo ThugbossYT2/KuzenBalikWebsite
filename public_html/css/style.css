@@ -178,11 +178,11 @@ body {
     align-self: center;
     position: absolute;
     color: white;
-    font-size: 3vh;
+    font-size: 30px;
     border: none;
     top: 0px;
-    letter-spacing: 0vw;
-    font-weight: 600;
+    letter-spacing: 4px;
+    font-weight: bold;
   }
   body {
     background-image: none;
@@ -221,7 +221,7 @@ body {
 
   .menu-logo {
     position: absolute;
-    right: -2vh;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
   }
