@@ -56,13 +56,13 @@ body {
 }
 
 .menu-container {
+  border-bottom: solid white 1px;
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   color: #9b9b9b;
   padding: 10px; /*FIXME*/
-  z-index: 1;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
@@ -173,6 +173,9 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  #circle {
+    display: none;
+  }
   #mobileTitle {
     display: block;
     align-self: center;
@@ -237,6 +240,9 @@ body {
 
   /* HBMenu */
   .menu {
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.548);
+
+    z-index: -2;
     position: absolute;
     box-sizing: border-box;
     width: 240px;
@@ -266,6 +272,9 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  #brForMobile {
+    display: none;
+  }
   #desktopTitle {
     color: white;
     font-size: 30px;
@@ -308,20 +317,6 @@ body {
     padding: 10 0;
   }
 
-  /* .menu li {
-    padding: 0 20px;
-    border-radius: 15px;
-    border: rgb(17, 2, 59) solid 2px;
-    margin: 2px;
-    background-image: linear-gradient(
-      to bottom,
-      #0c7cde,
-      rgb(16, 2, 54),
-      #0c7cde
-    );
-    background-size: 400% 250%;
-    transition: 0.3s;
-  } */
   .menu li {
     padding: 0 20px;
     border-radius: 15px;
@@ -340,6 +335,33 @@ body {
     border-radius: 15px;
     border: white solid 1px;
   }
+}
+.contentBoxText p {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 1;
+  user-select: "text";
+}
+.contentBox div {
+  user-select: "text";
+  scroll-behavior: smooth;
+  background-color: rgb(0, 40, 87);
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 20px;
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: -1;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
 /*TODO: -Try to make new branch if needed
 		    -center things in header 
