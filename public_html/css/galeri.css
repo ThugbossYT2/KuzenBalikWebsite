@@ -62,7 +62,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
   color: #9b9b9b;
-  padding: 10px; /*FIXME*/
+  padding: 10px;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
