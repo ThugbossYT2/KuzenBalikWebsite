@@ -323,7 +323,6 @@ body {
   user-select: text !important;
 }
 .contentBox div {
-  max-width: 10000px;
   user-select: text !important;
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
