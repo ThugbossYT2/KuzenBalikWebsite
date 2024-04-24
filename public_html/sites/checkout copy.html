@@ -1,92 +1,159 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Kuzen Balık, tutkulu balıkçılar için her şeyi sunan bir cennettir! Deneyimli bir ekip tarafından işletilen ve güvenilir bir kaynak olarak bilinen Kuzen Balık, en kaliteli rapalardan, balık malzemelerine, oltalardan, hatta özel olarak tasarlanmış güçlü olta motorlarına kadar her türlü ihtiyacınızı karşılar. Balık tutma performansınızı en üst düzeye çıkarmak için özenle seçilmiş sahte balık koleksiyonumuzla sizi bekliyoruz. Denizlerin ve nehirlerin gizemli dünyasına açılan kapınızı Kuzen Balık ile aralayın!"
-    />
-    <title>Kuzen Balıkçılık Checkout</title>
-    <!-- bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- css -->
-    <link rel="stylesheet" href="../css/checkout.css" />
-    <!-- tab icon -->
-    <link rel="shortcut icon" href="../media/images/KB_logo.png" />
+    <style>
+      /* CSS styles */
+      .popup {
+        top: 150px !important;
+        left: 80px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+      }
+      .popup img {
+        width: 300px;
+        height: 300px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .row {
+        font-size: 17px;
+        padding: 8px;
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        margin: 0 -16px;
+      }
+
+      .col-25 {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+      }
+
+      .col-50 {
+        -ms-flex: 50%; /* IE10 */
+        flex: 50%;
+      }
+
+      .col-75 {
+        -ms-flex: 75%; /* IE10 */
+        flex: 75%;
+      }
+
+      .col-25,
+      .col-50,
+      .col-75 {
+        padding: 0 16px;
+      }
+
+      .container {
+        background-color: #f2f2f2;
+        padding: 5px 20px 15px 20px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      label {
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .icon-container {
+        margin-bottom: 20px;
+        padding: 7px 0;
+        font-size: 24px;
+      }
+
+      .btn {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        width: 100%;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 17px;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+
+      a {
+        color: #2196f3;
+      }
+
+      hr {
+        border: 1px solid lightgrey;
+      }
+
+      span.price {
+        float: right;
+        color: grey;
+      }
+
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+      @media (max-width: 800px) {
+        .row {
+          flex-direction: column-reverse;
+        }
+        .col-25 {
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Styles for increment and decrement buttons */
+      .increment-btn,
+      .decrement-btn {
+        background-color: #ddd; /* Background color */
+        color: #555; /* Text color */
+        border: none; /* Remove border */
+        padding: 8px 12px; /* Padding */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Cursor style */
+        border-radius: 3px; /* Rounded corners */
+        margin: 0 5px; /* Add some space around buttons */
+      }
+
+      /* Container for item links, buttons, and prices */
+      .item-container {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Align items vertically */
+      }
+
+      /* Price styling */
+      .price {
+        margin-left: auto; /* Push prices to the right */
+      }
+    </style>
   </head>
   <body>
-    <div id="background"></div>
-    <header class="header sticky-top">
-      <nav class="menu-container">
-        <!-- burger menu -->
-        <input type="checkbox" aria-label="Toggle menu" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <a for="mobileTitle" id="mobileTitle">Kuzen Balıkçılık</a>
-
-        <!-- logo -->
-        <a href="../index.html" class="menu-logo Klogo">
-          <img src="../media/images/KB_logo.png" alt="" />
-        </a>
-        <a href="../index.html" id="circle" class=".container text-center"
-          ><h3 id="desktopTitle" class="Klogo menu">Kuzen Balıkçılık</h3> </a
-        ><br id="brForMobile" />
-
-        <!-- menu items -->
-        <div class="menu">
-          <ul></ul>
-          <ul>
-            <li>
-              <a href="../index.html"> Anasayfa</a>
-            </li>
-            <li>
-              <a href="../sites/galeri.html"> Galeri </a>
-            </li>
-            <li>
-              <a href="../sites/iletisim.html"> İletişim </a>
-            </li>
-            <li>
-              <a href="../sites/login.html">Giriş Yap</a>
-            </li>
-            <li>
-              <a href="../sites/register.html"> Kayıt Ol </a>
-            </li>
-            <li style="border: white solid 1px">
-              <div>
-                <a
-                  id="onFocusMobile"
-                  href="../sites/checkout.html"
-                  class="cart"
-                >
-                  <img src="../media/images/cart.png" alt="" /><label
-                    for="checkout"
-                    id="checkoutLabel"
-                    >0</label
-                  >
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <!-- HTML structure -->
     <div class="row">
       <div class="col-75">
-        <div class="COcontainer">
+        <div class="container">
           <form action="/action_page.php">
             <div class="row">
               <div class="col-50">
@@ -127,7 +194,6 @@
                   name="city"
                   placeholder="Antalya/Finike"
                 />
-
                 <div class="row">
                   <div class="col-50">
                     <label class="checkoutForm" for="state">Eyalet</label>
@@ -149,7 +215,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-50">
                 <h3>Ödeme</h3>
                 <label class="checkoutForm" class="input-label" for="fname"
@@ -207,68 +272,69 @@
                 </div>
               </div>
             </div>
-            <label
-              >class="checkoutForm"
-              <input type="checkbox" checked="checked" name="sameadr" />
-              Kargo adresi fatura adresiyle aynı
-            </label>
+            <label class="checkoutForm"
+              ><input type="checkbox" checked="checked" name="sameadr" /> Kargo
+              adresi fatura adresiyle aynı</label
+            >
             <input type="submit" value="Satın al" class="btn" />
           </form>
         </div>
       </div>
       <div class="col-25">
-        <div class="COcontainer">
+        <div class="container">
           <h2>Sepet <i class="fa fa-shopping-cart"></i></h2>
           <hr />
-          <p>
+          <!-- First item container -->
+          <div class="item-container">
             <a
               href="#"
               data-img="../media/images/blueGreenFFishNoBG.webp"
               data-text=" "
               >Sahte Balık</a
             >
-            <span class="price">₺250</span>
             <button class="increment-btn">+</button>
             <span class="item-count">0</span>
             <button class="decrement-btn">-</button>
-          </p>
-          <p>
+            <span class="price">₺250</span>
+          </div>
+          <!-- Repeat the same structure for other items -->
+          <div class="item-container">
             <a
               href="#"
               data-img="../media/images/fishPack7NoBG.webp"
               data-text=""
-              >7'li Sahte balık paketi
-            </a>
-            <span class="price">₺1500</span>
+              >7'li Sahte balık paketi</a
+            >
             <button class="increment-btn">+</button>
             <span class="item-count">0</span>
             <button class="decrement-btn">-</button>
-          </p>
-          <p>
+            <span class="price">₺1500</span>
+          </div>
+          <div class="item-container">
             <a
               href="#"
               data-img="../media/images/redFF-removebg-preview.webp"
               data-text=""
-              >Sahte Balık 26gr
-            </a>
-            <span class="price">₺350</span>
+              >Sahte Balık 26gr</a
+            >
             <button class="increment-btn">+</button>
             <span class="item-count">0</span>
             <button class="decrement-btn">-</button>
-          </p>
-          <p>
+            <span class="price">₺350</span>
+          </div>
+          <div class="item-container">
             <a
               href="#"
               data-img="../media/images/whiteFF-removebg-preview.webp"
               data-text=""
               >Sahte Balık 10gr</a
             >
-            <span class="price">₺250</span>
             <button class="increment-btn">+</button>
             <span class="item-count">0</span>
             <button class="decrement-btn">-</button>
-          </p>
-
+            <span class="price">₺250</span>
+          </div>
+          <!-- End of repeated structure -->
           <hr />
           <h4>
             Toplam:
@@ -282,11 +348,13 @@
 
     <div class="popup" style="display: none"></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+      // JavaScript code
       $(document).ready(function () {
         // Function to handle increasing item count and updating total price
         $(".increment-btn").click(function () {
-          var $parent = $(this).closest("p");
+          var $parent = $(this).closest(".item-container");
           var $priceSpan = $parent.find(".price");
           var price = parseFloat($priceSpan.text().replace("₺", ""));
           var count = parseInt($parent.find(".item-count").text());
@@ -305,7 +373,7 @@
 
         // Function to handle decreasing item count and updating total price
         $(".decrement-btn").click(function () {
-          var $parent = $(this).closest("p");
+          var $parent = $(this).closest(".item-container");
           var $priceSpan = $parent.find(".price");
           var price = parseFloat($priceSpan.text().replace("₺", ""));
           var count = parseInt($parent.find(".item-count").text());
@@ -323,6 +391,7 @@
             $(".total-price").html("<b>₺" + totalPrice.toFixed(2) + "</b>");
           }
         });
+
         $(".col-25 a")
           .on("mouseenter", function (evt) {
             var imgUrl = $(this).data("img");
@@ -339,8 +408,5 @@
           });
       });
     </script>
-    <a href="#"><button class="sbtn">^</button></a>
-
-    <script src="../js/script.js" type="text/javascript"></script>
   </body>
 </html>
