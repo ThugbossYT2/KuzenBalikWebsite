@@ -54,7 +54,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow-x: hidden; /* Remove the bottom scrollbar */
+  /* overflow-x: hidden; Remove the bottom scrollbar */
 
   height: 2000px;
 }
@@ -188,7 +188,7 @@ body {
   }
   body {
     background-image: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   #background {
     z-index: -1;
