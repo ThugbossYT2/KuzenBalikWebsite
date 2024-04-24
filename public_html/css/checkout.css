@@ -13,6 +13,7 @@ html * {
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
 a .sbtn {
+  position: fixed !important;
   z-index: 9999;
   background-image: linear-gradient(
     to bottom,
@@ -23,7 +24,6 @@ a .sbtn {
   background-size: 400% 250%;
   cursor: pointer;
   text-transform: lowercase;
-  position: fixed !important;
   bottom: 15px;
   right: 20px;
   font-family: Roboto, sans-serif;
@@ -39,6 +39,7 @@ a .sbtn {
 }
 
 a .sbtn:hover {
+  position: fixed !important;
   transition: 613ms;
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
