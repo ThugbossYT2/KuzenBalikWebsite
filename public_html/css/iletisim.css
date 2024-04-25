@@ -3,6 +3,15 @@ html * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-color: rgb(16, 2, 54); */
   }
+  .WebsiteLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .WebsiteLinks a {
+    margin: 0 10px; /* Adjust margin as needed */
+  }
   
   /* .blankLink{
     text-decoration: none;
@@ -41,6 +50,35 @@ html * {
     padding: 7px 20px 1px 20px;
     transform: translateY(-18px);
     color: white;
+    border: solid 1px white;
+    background-position: bottom;
+  }
+
+  .Gbtn{
+    width: 30vh;
+    font-size: 20px;
+    background-image: linear-gradient(
+      to bottom,
+      #0c7cde,
+      rgb(16, 2, 54),
+      #0c7cde
+    );
+    background-size: 400% 250%;
+    border-radius: 15px;
+    transition: 613ms;
+    border: solid rgba(255, 255, 255, 0) 1px ;
+  }
+
+  .Gbtn:hover{
+    background-image: linear-gradient(
+      to bottom,
+      #0c7cde,
+      rgb(16, 2, 54),
+      #0c7cde
+    );
+    background-size: 400% 250%;
+    border-radius: 15px;
+    transition: 613ms;
     border: solid 1px white;
     background-position: bottom;
   }
@@ -167,6 +205,9 @@ html * {
   
   /* mobile styles */
   @media only screen and (max-width: 767px) {
+    .ss{
+      width: 30vh !important ;
+    }
     #circle {
       display: none;
     }
@@ -261,6 +302,9 @@ html * {
   
   /* desktop styles */
   @media only screen and (min-width: 768px) {
+    .ss{
+      width: 500px !important ;
+    }
     #brForMobile {
       display: none;
     }
@@ -326,31 +370,33 @@ html * {
     user-select: "text";
   }
  
-  .contentBox{
-    user-select: "text";
-    scroll-behavior: smooth;
-    background-color: rgb(0, 40, 87);
-    height: auto;
-    position: absolute;
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-    border: solid rgb(255, 255, 255) 1px;
-    padding: 20px;
-    padding-top: 10px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    transition: 0.5s;
-    z-index: -1;
-    box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
-  }
+  .contentBox {
+  user-select: "text";
+  scroll-behavior: smooth;
+  background-color: rgb(0, 40, 87);
+  height: auto;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 20px;
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: 2; /* Adjusted z-index value */
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
+}
+
 
 
   .ss{
     margin-bottom: 10px;
+    
   }
 
 
