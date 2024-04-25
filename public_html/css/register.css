@@ -375,6 +375,11 @@ html * {
   .labelMaxWidth{
     width: auto;
   }
+
+  .textbox{
+    margin-bottom: 10px;
+  }
+
   /*TODO: -Try to make new branch if needed
               -center things in header 
           -add shopping cart icon  ✔️
