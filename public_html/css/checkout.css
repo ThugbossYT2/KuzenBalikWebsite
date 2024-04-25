@@ -54,7 +54,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
- overflow-x: hidden;
+  overflow-x: hidden;
 
   height: 2000px;
 }
@@ -172,10 +172,9 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
-
   .btn {
-  width: 35vh !important;
-}
+    width: 35vh !important;
+  }
 
   #circle {
     display: none;
@@ -272,11 +271,10 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
-
   .btn {
-  width: 70vh !important;
-}
-  
+    width: 70vh !important;
+  }
+
   #brForMobile {
     display: none;
   }
@@ -433,6 +431,12 @@ label.checkoutForm {
   margin-bottom: 10px;
   display: block;
 }
+.CardDiv {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+}
 
 .icon-container {
   margin-bottom: 20px;
@@ -441,7 +445,7 @@ label.checkoutForm {
 }
 
 .btn {
-  width: 70vh ;
+  width: 70vh;
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
@@ -449,7 +453,7 @@ label.checkoutForm {
     #0c7cde
   );
   background-size: 400% 250%;
- 
+
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -461,9 +465,8 @@ label.checkoutForm {
 }
 
 .btn:hover {
-  
   transition: 613ms;
-  
+
   color: white;
   border: solid 1px white;
   background-position: bottom;
