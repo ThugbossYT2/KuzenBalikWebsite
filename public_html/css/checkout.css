@@ -172,6 +172,11 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+
+  .btn {
+  width: 35vh !important;
+}
+
   #circle {
     display: none;
   }
@@ -267,6 +272,11 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+
+  .btn {
+  width: 70vh !important;
+}
+  
   #brForMobile {
     display: none;
   }
@@ -431,19 +441,32 @@ label.checkoutForm {
 }
 
 .btn {
-  background-color: #04aa6d;
+  width: 70vh ;
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+ 
   color: white;
   padding: 12px;
   margin: 10px 0;
-  border: none;
   width: 100%;
-  border-radius: 3px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 17px;
+  transition: 613ms;
 }
 
 .btn:hover {
-  background-color: #45a049;
+  
+  transition: 613ms;
+  
+  color: white;
+  border: solid 1px white;
+  background-position: bottom;
 }
 
 a {
