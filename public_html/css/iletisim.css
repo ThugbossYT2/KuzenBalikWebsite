@@ -11,7 +11,7 @@ html * {
   
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
   
-  a .btn {
+  a .sbtn {
     background-image: linear-gradient(
       to bottom,
       #0c7cde,
@@ -36,7 +36,7 @@ html * {
     transform: translateY(0);
   }
   
-  a .btn:hover {
+  a .sbtn:hover {
     transition: 613ms;
     padding: 7px 20px 1px 20px;
     transform: translateY(-18px);
@@ -326,11 +326,11 @@ html * {
     user-select: "text";
   }
  
-  .contentBox div {
+  .contentBox{
     user-select: "text";
     scroll-behavior: smooth;
     background-color: rgb(0, 40, 87);
-    height: 200px;
+    height: auto;
     position: absolute;
     top: 50vh;
     left: 50%;
@@ -346,6 +346,17 @@ html * {
     transition: 0.5s;
     z-index: -1;
     box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
+  }
+
+
+  .ss{
+    margin-bottom: 10px;
+  }
+
+
+
+  .labelMaxWidth{
+    width: auto;
   }
   /*TODO: -Try to make new branch if needed
               -center things in header 
