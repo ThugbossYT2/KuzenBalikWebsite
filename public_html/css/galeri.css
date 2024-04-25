@@ -1,17 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
 html * {
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: rgb(16, 2, 54); */
 }
 
-/* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+.gallery-col {
+  padding: 10px;
+}
 
-a .btn {
+a .sbtn {
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
@@ -36,7 +40,7 @@ a .btn {
   transform: translateY(0);
 }
 
-a .btn:hover {
+a .sbtn:hover {
   transition: 613ms;
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
@@ -167,6 +171,9 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  .gallery-col {
+    padding: 15px;
+  }
   #circle {
     display: none;
   }
@@ -261,6 +268,13 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  .gallery-img:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+  .gallery-col {
+    padding: 20px;
+  }
   #brForMobile {
     display: none;
   }
@@ -343,17 +357,6 @@ body {
   text-align: center;
   font-weight: bold;
   transition: 0.5s;
-  z-index: -1;
+  z-index: 1;
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
-/*TODO: -Try to make new branch if needed
-		    -center things in header 
-        -add shopping cart icon  ✔️
-        -login/register (take from adVize)
-        -make gallery cuz ez if u get pics 
-        -make outline go away (border) on "Kuzen balıkçılık"  
-        -maybe change the logo a little in photoshop
-        -add all sites and header + scroll Button code
-        -remove logo bg
-        
-*/
