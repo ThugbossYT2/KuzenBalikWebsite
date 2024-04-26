@@ -45,6 +45,7 @@ a .sbtn:hover {
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
   color: white;
+
   border: solid 1px white;
   background-position: bottom;
 }
