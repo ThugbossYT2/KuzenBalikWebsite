@@ -26,6 +26,16 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- tab icon -->
     <link rel="shortcut icon" href="media/images/KB_logo.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <div id="background"></div>
@@ -81,17 +91,88 @@
       </nav>
     </header>
 
-    <div class="contentBox container">
-      <div class="container">
-        <label class="contentBoxText" for="contentBoxText"
-          >Content box title</label
-        >
-        <p class="contentBoxText">text</p>
+    <div style="text-align: center">
+      <h3
+        style="
+          text-align: center;
+          margin: 55px 0px;
+          border-bottom: 2px solid #666;
+          display: inline-block;
+          padding-bottom: 10px;
+        "
+      >
+        Bootstrap Carousel Fade In & FadeOut
+      </h3>
+    </div>
+    <div
+      id="carouselFade"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="media/images/galeri/1.webp" alt="First slide" />
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <!-- Controls -->
+      <a
+        class="left carousel-control"
+        href="#carouselFade"
+        role="button"
+        data-slide="prev"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-left"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="right carousel-control"
+        href="#carouselFade"
+        role="button"
+        data-slide="next"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-right"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <a href="#"><button class="btn">^</button></a>
-
-    <script src="js/script.js" type="text/javascript"></script>
+    <a href="#"><button class="sbtn">^</button></a>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script>
+      $("#carouselFade").carousel();
+    </script>
   </body>
 </html>
