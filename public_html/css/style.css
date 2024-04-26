@@ -168,8 +168,11 @@ body {
   font-size: 22px;
 }
 
-/* mobile styles */
+/* for mobile styles */
 @media only screen and (max-width: 767px) {
+  .slideshow-table-container {
+    width: fit-content;
+  }
   #circle {
     display: none;
   }
@@ -259,7 +262,7 @@ body {
   }
 }
 
-/* desktop styles */
+/* for desktop styles */
 @media only screen and (min-width: 768px) {
   #brForMobile {
     display: none;
@@ -319,19 +322,19 @@ body {
     border: white solid 1px;
   }
 }
-.contentBoxText p {
+p.contentBoxText {
   font-size: 20px;
   font-weight: 600;
   z-index: 1;
   user-select: text !important;
 }
-.contentBox div {
+div.contentBox {
   user-select: text !important;
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
   height: auto;
   position: absolute;
-  top: 40vh;
+  top: 55vh;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
@@ -405,26 +408,51 @@ body {
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
-  height: 50vh;
-  width: 50vh;
+  height: 45vh;
+  width: 45vh;
 }
 .item:nth-child(1) {
-  background: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/HZZKGVVJ6I.jpg");
+  background: url("../media/images/galeri/1.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .item:nth-child(2) {
-  background: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/D2ROMCUEIV.jpg");
+  background: url("../media/images/galeri/2.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .item:nth-child(3) {
-  background: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/PU9HHZB5QW.jpg");
+  background: url("../media/images/galeri/3.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+/* 
+.item:nth-child(4) {
+  background: url("../media/images/galeri/4.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.item:nth-child(5) {
+  background: url("../media/images/galeri/5.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.item:nth-child(6) {
+  background: url("../media/images/galeri/6.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+} */
+.table tbody tr td:nth-child(2) {
+  text-align: right;
+}
+.table tbody tr td {
+  padding: 5px 100px !important; /* Adjust the padding values as needed */
 }
