@@ -56,27 +56,24 @@
     <div class="container">
       <label class="contentBoxText" for="contentBoxText">Kayıt ol </label>
       <p class="contentBoxText">
-
-       
-          
-                <input required type="text" class="form-control textbox " placeholder="Adınız">
-                
-                <input required type="text" class="form-control textbox" placeholder="Soyadınız">
-                  
-                <input  required type="password" class="form-control textbox" placeholder="Parola Giriniz">
-               
-                <select placeholder="cinsiyet" name="cinsiyet" id="cinsiyet">
-                    <option value="volvo">Erkek</option>
-                    <option value="saab">Kadın</option>
-                    <option value="mercedes">Belirtmek istemiyorum</option>
-                  </select>
-                    <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                             
-       
-        <br />
+        <form>
+          <div class="input-group">
+            <input required type="text" class="form-control textbox Ctb" placeholder="Adınız">
+            <input required type="text" class="form-control textbox Ctb" placeholder="Soyadınız">
+          </div>
+          <input required type="password" class="form-control textbox col" placeholder="Parola Giriniz">
+          <select placeholder="cinsiyet" name="cinsiyet" id="cinsiyet">
+            <option value="" disabled selected>Cinsiyet seçiniz</option>
+            <option value="erkek">Erkek</option>
+            <option value="kadin">Kadın</option>
+            <option value="nuhUh">Belirtmek istemiyorum</option>
+          </select>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br>
         <div class="WebsiteLinks">
-        
+          <!-- Website links -->
         </div>
       </p>
     </div>
