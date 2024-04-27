@@ -75,7 +75,6 @@ body {
 .menu-logo {
   line-height: 0;
   margin: 0 0 0 0;
-  padding-right: 16px;
 }
 .Klogo {
   border: rgba(0, 0, 0, 0) solid !important;
@@ -223,7 +222,7 @@ body {
 
   .menu-logo {
     position: absolute;
-    right: -1px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
   }
