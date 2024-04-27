@@ -1,135 +1,449 @@
-.popup {
-  top: 150px !important;
-  left: 80px;
-  position: absolute;
-  width: 30px;
-  height: 30px;
+html * {
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: rgb(16, 2, 54); */
 }
-.popup img {
-  width: 300px;
-  height: 300px;
+
+/* .blankLink{
+  text-decoration: none;
+  color: black;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
+a .sbtn {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  z-index: 5;
+  background-size: 400% 250%;
+  cursor: pointer;
+  text-transform: lowercase;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  padding: 7px 20px 1px 20px;
+  border: solid 0.1px white;
+  box-shadow: rgb(0, 0, 0) 0px 9px 28px -2px;
+  border-radius: 21px;
+  transition: 613ms;
+  transform: translateY(0);
+}
+
+a .sbtn:hover {
+  transition: 613ms;
+  padding: 7px 20px 1px 20px;
+  transform: translateY(-18px);
+  color: white;
+  border: solid 1px white;
+  background-position: bottom;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../media/images/fishCircle2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  height: 10000px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  font-size: 17px;
-  padding: 8px;
-  display: -ms-flexbox; /* IE10 */
+.menu-container {
+  border-bottom: solid white 1px;
+  position: relative;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type="text"] {
-  width: 100%;
+  align-items: center;
   margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  color: #9b9b9b;
+  padding: 10px;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background-color: rgb(0, 40, 87);
 }
 
-label {
-  margin-bottom: 10px;
+.menu-logo {
+  line-height: 0;
+  margin: 0 0 0 0;
+}
+.Klogo {
+  border: rgba(0, 0, 0, 0) solid !important;
+}
+.Klogo:hover {
+  border: rgba(0, 0, 0, 0) solid !important;
+}
+.cart img {
+  max-width: 40px !important;
+  max-height: 40px !important;
+}
+
+.menu-logo img {
+  max-height: 90px;
+  max-width: 100px;
+  flex-shrink: 0;
+  padding: 1px;
+  background-color: rgb(0, 40, 87);
+  border-radius: 10px;
+  padding: 5px;
+  border: #0c7cde00 solid !important;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  transition: 0.5s;
+  border-radius: 15px;
+
+  padding: 8px;
+}
+
+.menu-container input {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Burger menu */
+.menu-container span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff; /*hamburger color*/
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menu-container span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menu-container span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menu-container input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(3px, -1px);
+  background: rgb(255, 255, 255);
+}
+
+.menu-container input:checked ~ span:nth-child(4) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-container input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/* 
+for mobile styles MARK: MOBILE  
+*/
+@media only screen and (max-width: 767px) {
+  p.contentBoxText {
+    width: 300px;
+    font-size: 20px !important;
+  }
+  .carousel,
+  .carousel-inner,
+  .carousel-inner .item {
+    height: 30vh !important;
+    width: 30vh !important;
+  }
+  #circle {
+    display: none;
+  }
+  #mobileTitle {
+    display: block;
+    align-self: center;
+    position: absolute;
+    color: white;
+    font-size: 3vh;
+    border: none;
+    top: 0px;
+    letter-spacing: 0vw;
+    font-weight: 600;
+  }
+  body {
+    background-image: none;
+  }
+  #background {
+    z-index: -1;
+    background-image: url(../media/images/fishCircle2.webp);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  .menu li {
+    border: solid rgba(0, 41, 87, 0) !important;
+  }
+  .menu-container a {
+    border-radius: 15px;
+    border: rgba(87, 0, 0, 0) solid 1px;
+    transition: 0.5s;
+  }
+  .menu-container a:hover {
+    border-radius: 15px;
+    border: white solid 1px;
+  }
+  #onFocusMobile {
+    border-radius: 15px;
+    border: rgb(255, 255, 255) solid 1px;
+    transition: 0.5s;
+  }
+  .menu-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-logo {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-logo img {
+    max-height: 80px;
+    max-width: 80px;
+    flex-shrink: 0;
+    background-color: rgba(0, 41, 87, 0) !important;
+    padding: 5px;
+    border: #0c7cde00 solid !important;
+  }
+
+  /* HBMenu */
+  .menu {
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.548);
+    z-index: -2;
+    position: absolute;
+    box-sizing: border-box;
+    width: 270px;
+    left: -300px;
+    top: 0;
+    margin: -15px;
+    padding: 100px 50px 10px 60px;
+    background: rgb(0, 40, 87);
+    border-radius: 0px 0px 50px 0px;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .menu-container input:checked ~ .menu {
+    transform: translateX(100%);
+  }
+}
+
+/* 
+for desktop styles MARK: DESKTOP
+ */
+@media only screen and (min-width: 768px) {
+  p.contentBoxText {
+    padding-top: 0px !important;
+  }
+  #oltaBtn {
+    user-select: none;
+    left: 15vh !important;
+    top: 80%;
+  }
+  .button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Adjust margin as needed */
+    position: absolute;
+    top: 75%;
+    left: 57%;
+  }
+  .infoTable {
+    font-size: 30px;
+    height: 0px;
+    top: 80px;
+    position: relative;
+    margin-left: 100px !important;
+    margin-bottom: 110px !important;
+  }
+  .contentBox {
+    display: flex;
+  }
+  #brForMobile {
+    display: none;
+  }
+  #desktopTitle {
+    color: white;
+    font-size: 30px;
+    border: none;
+    top: 0px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  #mobileTitle {
+    display: none;
+  }
+  .menu-container {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .menu-container a {
+    color: white;
+    font-size: 20px;
+  }
+
+  .menu-container input {
+    display: none;
+  }
+
+  /* Burger menu */
+  .menu-container span {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    padding: 10 0;
+  }
+
+  .menu li {
+    padding: 0 20px;
+    border-radius: 15px;
+    border: solid rgba(0, 41, 87, 0) 1px;
+    margin: 2px;
+    background-size: 400% 250%;
+    transition: 0.5s;
+  }
+  .menu li:hover {
+    border-radius: 15px;
+    border: white solid 1px;
+  }
+}
+/* MARK: contentBox
+*/
+p.contentBoxText {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 1;
+  user-select: text !important;
   display: block;
 }
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #04aa6d;
+.contentBox {
+  user-select: text !important;
+  scroll-behavior: smooth;
+  background-color: rgb(0, 40, 87);
+  height: auto;
+  position: absolute;
+  top: 55vh; /* Adjust the top position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 20px;
+  padding-top: 50px; /* Add padding to the top */
   color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: 1;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
 
-.btn:hover {
-  background-color: #45a049;
+.contentBoxText {
+  padding-top: 10px; /* Add padding to the top */
+
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+  user-select: text !important;
+  display: block;
+  text-align: center; /* Center the text horizontally */
+  margin: 0 auto 20px !important; /* Center the label vertically and add margin at the bottom */
+  position: absolute; /* Position the label absolutely */
+  top: 0; /* Position the label at the top of its containing element */
+  left: 50%; /* Move the label to the horizontal center */
+  transform: translateX(-50%); /* Adjust for horizontal centering */
 }
 
-a {
-  color: #2196f3;
+/* -----------------------MARK: image slideshow ----------------------- 
+*/
+
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 45vh;
+  width: 45vh;
 }
 
-hr {
-  border: 1px solid lightgrey;
+.Gbtn {
+  color: white;
+  font-weight: 500;
+  width: 30vh;
+  font-size: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid rgba(255, 255, 255, 0) 1px;
 }
 
-span.price {
-  float: right;
-  color: grey;
+.Gbtn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid 1px white;
+  background-position: bottom;
 }
 
-/* Styles for increment and decrement buttons */
-.increment-btn,
-.decrement-btn {
-  background-color: #ddd; /* Background color */
-  color: #555; /* Text color */
-  border: none; /* Remove border */
-  padding: 8px 12px; /* Padding */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Cursor style */
-  border-radius: 3px; /* Rounded corners */
-  margin-left: 5px; /* Add some space between buttons */
-  transition: 0.2s;
-}
-
-/* Hover effect */
-.increment-btn:hover,
-.decrement-btn:hover {
-  background-color: #bbb; /* Darken background on hover */
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
+p.contentBoxText {
+  font-size: 35px;
 }
