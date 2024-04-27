@@ -31,6 +31,7 @@
       type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
     />
+    <!-- ^ makes title go up FIXME  -->
     <link
       href="https://fonts.googleapis.com/css?family=Lato"
       rel="stylesheet"
@@ -49,7 +50,7 @@
         <a for="mobileTitle" id="mobileTitle">Kuzen Balıkçılık</a>
         <!-- logo -->
         <a href="../index.html" class="menu-logo Klogo">
-          <img src="../media/images/KB_logo.png" alt="" />
+          <img src="media/images/KB_logo.png" alt="" />
         </a>
         <a href="../index.html" id="circle" class=".container text-center"
           ><h3 id="desktopTitle" class="Klogo menu">Kuzen Balıkçılık</h3></a
@@ -59,23 +60,23 @@
           <ul></ul>
           <ul>
             <li style="border: white solid 1px">
-              <a id="onFocusMobile" href="index.html"> Anasayfa</a>
+              <a id="onFocusMobile" href="../index.html"> Anasayfa</a>
             </li>
             <li>
-              <a href="../sites/galeri.html"> Galeri </a>
+              <a href="galeri.html"> Galeri </a>
             </li>
             <li>
-              <a href="../sites/iletisim.html"> İletişim </a>
+              <a href="iletisim.html"> İletişim </a>
             </li>
             <li>
-              <a href="../sites/login.html">Giriş Yap</a>
+              <a href="login.html">Giriş Yap</a>
             </li>
             <li>
-              <a href="../sites/register.html"> Kayıt Ol </a>
+              <a href="register.html"> Kayıt Ol </a>
             </li>
             <li>
               <div>
-                <a href="../sites/checkout.html" class="cart">
+                <a href="checkout.html" class="cart">
                   <img src="../media/images/cart.png" alt="" /><label
                     for="checkout"
                     id="checkoutLabel"
@@ -88,23 +89,67 @@
         </div>
       </nav>
     </header>
-    <div class="contentBox container">
-      <img src="../media/images/cart.png" style="width: 100px" alt="" />
+    <div class="container contentBox">
+      <h2 class="contentBoxText" for="contentBoxText">Sahte Balık</h2>
+
+      <div align="center">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- table -->
+      </div>
       <table
         class="table table-striped table-dark table-group-divider infoTable"
       >
         <tbody>
           <tr>
             <td scope="row">Uzunluk:</td>
-            <td>Mark</td>
+            <td>16 cm</td>
           </tr>
           <tr>
             <td scope="row">Ağırlık:</td>
-            <td>Jacob</td>
+            <td>26 gr</td>
           </tr>
         </tbody>
+
         <br />
       </table>
+      <div class="button-container">
+        <button type="submit" class="Gbtn">Sepete Ekle</button>
+        <!-- Button placed outside the flex container -->
+      </div>
     </div>
 
     <a href="#"><button class="sbtn">^</button></a>

@@ -4,9 +4,6 @@ html * {
   /* background-color: rgb(16, 2, 54); */
 }
 
-.fotoClass {
-  max-width: 200px;
-}
 /* .blankLink{
   text-decoration: none;
   color: black;
@@ -172,8 +169,11 @@ body {
 for mobile styles MARK: MOBILE  
 */
 @media only screen and (max-width: 767px) {
-  .contentBox {
-    display: block !important;
+  .carousel,
+  .carousel-inner,
+  .carousel-inner .item {
+    height: 30vh !important;
+    width: 30vh !important;
   }
   #circle {
     display: none;
@@ -268,8 +268,21 @@ for mobile styles MARK: MOBILE
 for desktop styles MARK: DESKTOP
  */
 @media only screen and (min-width: 768px) {
+  .button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Adjust margin as needed */
+    position: absolute;
+    top: 80%;
+    left: 57%;
+  }
   .infoTable {
     height: 0px;
+    top: 120px;
+    position: relative;
+    margin-left: 100px !important;
+  }
+  .contentBox {
+    display: flex;
   }
   #brForMobile {
     display: none;
@@ -329,26 +342,28 @@ for desktop styles MARK: DESKTOP
     border: white solid 1px;
   }
 }
+/* MARK: contentBox
+*/
 p.contentBoxText {
   font-size: 20px;
   font-weight: 600;
   z-index: 1;
   user-select: text !important;
+  display: block;
 }
-div.contentBox {
-  display: flex;
+.contentBox {
   user-select: text !important;
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
   height: auto;
   position: absolute;
-  top: 55vh;
+  top: 55vh; /* Adjust the top position */
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   border: solid rgb(255, 255, 255) 1px;
   padding: 20px;
-  padding-top: 10px;
+  padding-top: 50px; /* Add padding to the top */
   color: white;
   font-size: 20px;
   text-align: center;
@@ -356,6 +371,22 @@ div.contentBox {
   transition: 0.5s;
   z-index: 1;
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
+}
+
+.contentBoxText {
+  padding-top: 10px; /* Add padding to the top */
+
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+  user-select: text !important;
+  display: block;
+  text-align: center; /* Center the text horizontally */
+  margin: 0 auto 20px !important; /* Center the label vertically and add margin at the bottom */
+  position: absolute; /* Position the label absolutely */
+  top: 0; /* Position the label at the top of its containing element */
+  left: 50%; /* Move the label to the horizontal center */
+  transform: translateX(-50%); /* Adjust for horizontal centering */
 }
 
 /* -----------------------MARK: image slideshow ----------------------- 
@@ -459,3 +490,32 @@ div.contentBox {
   background-position: center center;
   background-repeat: no-repeat;
 } */
+
+.Gbtn {
+  width: 30vh;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid rgba(255, 255, 255, 0) 1px;
+}
+
+.Gbtn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid 1px white;
+  background-position: bottom;
+}
