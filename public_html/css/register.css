@@ -332,10 +332,10 @@ body {
   background-color: rgb(0, 40, 87);
   height: auto;
   position: absolute;
-  top: 50vh;
+  top: 56vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   border: solid rgb(255, 255, 255) 1px;
   padding: 20px;
   padding-top: 10px;
@@ -378,7 +378,38 @@ body {
 }
 
 /* -----------register form---------- */
+.Gbtn {
+  width: 30vh;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid rgba(255, 255, 255, 0) 1px;
+}
 
+.Gbtn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid 1px white;
+  background-position: bottom;
+}
+.borderRadius {
+  border-radius: 10px !important;
+  color: #595c5f;
+}
 .Ctb {
   width: calc(
     50% - 5px
@@ -386,7 +417,8 @@ body {
   margin-right: 10px; /* Add margin between inputs */
   border-radius: 10px !important;
 }
-
+.widthSet {
+}
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -394,6 +426,11 @@ body {
 }
 
 /* Kerem touched here */
+
+.kayitCls {
+  margin-top: 0px;
+  padding-top: 0px;
+}
 
 input {
   margin: 10px;
@@ -408,14 +445,10 @@ input {
   margin-top: -10px;
 }
 .container {
-  margin: 50px auto;
+  margin: -30px auto;
   padding: 20px;
   max-width: 400px;
   border-radius: 5px;
-}
-
-.border2 {
-  border: none;
 }
 
 select.ker {
