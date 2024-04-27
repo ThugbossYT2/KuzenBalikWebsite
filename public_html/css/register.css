@@ -417,8 +417,7 @@ body {
   margin-right: 10px; /* Add margin between inputs */
   border-radius: 10px !important;
 }
-.widthSet {
-}
+
 .input-group {
   display: flex;
   justify-content: space-between;
