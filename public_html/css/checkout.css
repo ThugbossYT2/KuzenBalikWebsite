@@ -1,28 +1,29 @@
 html * {
+  box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* background-color: rgb(16, 2, 54); */
 }
 
 /* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+    text-decoration: none;
+    color: black;
+  } */
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
 a .sbtn {
+  position: fixed !important;
+  z-index: 9999;
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
     rgb(16, 2, 54),
     #0c7cde
   );
-  z-index: 5;
   background-size: 400% 250%;
   cursor: pointer;
   text-transform: lowercase;
-  position: fixed;
   bottom: 15px;
   right: 20px;
   font-family: Roboto, sans-serif;
@@ -38,6 +39,7 @@ a .sbtn {
 }
 
 a .sbtn:hover {
+  position: fixed !important;
   transition: 613ms;
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
@@ -52,11 +54,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-x: hidden;
 
-  height: 3400px;
+  height: 2000px;
 }
 
 .menu-container {
+  width: 100%; /* Ensure header covers full width */
   border-bottom: solid white 1px;
   position: relative;
   display: flex;
@@ -73,6 +77,7 @@ body {
 .menu-logo {
   line-height: 0;
   margin: 0 0 0 0;
+  padding-right: 16px;
 }
 .Klogo {
   border: rgba(0, 0, 0, 0) solid !important;
@@ -165,20 +170,12 @@ body {
   font-size: 22px;
 }
 
-/* 
-for mobile styles MARK: MOBILE  
-*/
+/* mobile styles */
 @media only screen and (max-width: 767px) {
-  p.contentBoxText {
-    width: 300px;
-    font-size: 20px !important;
+  .btn {
+    width: 35vh !important;
   }
-  .carousel,
-  .carousel-inner,
-  .carousel-inner .item {
-    height: 30vh !important;
-    width: 30vh !important;
-  }
+
   #circle {
     display: none;
   }
@@ -187,14 +184,15 @@ for mobile styles MARK: MOBILE
     align-self: center;
     position: absolute;
     color: white;
-    font-size: 30px;
+    font-size: 3vh;
     border: none;
     top: 0px;
-    letter-spacing: 4px;
-    font-weight: bold;
+    letter-spacing: 0vw;
+    font-weight: 600;
   }
   body {
     background-image: none;
+    /* overflow-x: hidden; */
   }
   #background {
     z-index: -1;
@@ -225,11 +223,14 @@ for mobile styles MARK: MOBILE
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
+    border: rgb(255, 255, 255) solid 1px;
+    border-top: rgb(0, 40, 87);
+    border-left: none;
   }
 
   .menu-logo {
     position: absolute;
-    right: 0px;
+    right: -1px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -268,36 +269,12 @@ for mobile styles MARK: MOBILE
   }
 }
 
-/* 
-for desktop styles MARK: DESKTOP
- */
+/* desktop styles */
 @media only screen and (min-width: 768px) {
-  p.contentBoxText {
-    padding-top: 0px !important;
+  .btn {
+    width: 70vh !important;
   }
-  #oltaBtn {
-    user-select: none;
-    left: 15vh !important;
-    top: 80%;
-  }
-  .button-container {
-    text-align: center; /* Center the button */
-    margin-top: 20px; /* Adjust margin as needed */
-    position: absolute;
-    top: 75%;
-    left: 57%;
-  }
-  .infoTable {
-    font-size: 30px;
-    height: 0px;
-    top: 80px;
-    position: relative;
-    margin-left: 100px !important;
-    margin-bottom: 110px !important;
-  }
-  .contentBox {
-    display: flex;
-  }
+
   #brForMobile {
     display: none;
   }
@@ -356,81 +333,119 @@ for desktop styles MARK: DESKTOP
     border: white solid 1px;
   }
 }
-/* MARK: contentBox
-*/
-p.contentBoxText {
+.contentBoxText p {
   font-size: 20px;
   font-weight: 600;
   z-index: 1;
-  user-select: text !important;
-  display: block;
+  user-select: "text";
 }
-.contentBox {
-  user-select: text !important;
+.contentBox div {
+  user-select: "text";
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
-  height: auto;
+  height: 200px;
   position: absolute;
-  top: 55vh; /* Adjust the top position */
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   border: solid rgb(255, 255, 255) 1px;
   padding: 20px;
-  padding-top: 50px; /* Add padding to the top */
+  padding-top: 10px;
   color: white;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
   transition: 0.5s;
-  z-index: 1;
+  z-index: -1;
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
 
-.contentBoxText {
-  padding-top: 10px; /* Add padding to the top */
+/* .body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+} */
+/* -------------------------------------CSS for Checkout form-------------------------------------- */
 
-  font-size: 20px;
-  font-weight: bold;
-  z-index: 1;
-  user-select: text !important;
-  display: block;
-  text-align: center; /* Center the text horizontally */
-  margin: 0 auto 20px !important; /* Center the label vertically and add margin at the bottom */
-  position: absolute; /* Position the label absolutely */
-  top: 0; /* Position the label at the top of its containing element */
-  left: 50%; /* Move the label to the horizontal center */
-  transform: translateX(-50%); /* Adjust for horizontal centering */
+.popup {
+  top: 150px !important;
+  left: 80px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.popup img {
+  width: 300px;
+  height: 300px;
 }
 
-/* -----------------------MARK: image slideshow ----------------------- 
-*/
-
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-  height: 45vh;
-  width: 45vh;
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -16px;
 }
 
-.Gbtn {
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.COcontainer {
+  background-color: rgb(0, 40, 87);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
   color: white;
-  font-weight: 500;
-  width: 30vh;
-  font-size: 30px;
-  background-image: linear-gradient(
-    to bottom,
-    #0c7cde,
-    rgb(16, 2, 54),
-    #0c7cde
-  );
-  background-size: 400% 250%;
-  border-radius: 15px;
-  transition: 613ms;
-  border: solid rgba(255, 255, 255, 0) 1px;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.548);
+  padding: 20px;
 }
 
-.Gbtn:hover {
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label.checkoutForm {
+  margin-bottom: 10px;
+  display: block;
+}
+.CardDiv {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  width: 70vh;
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
@@ -438,12 +453,85 @@ p.contentBoxText {
     #0c7cde
   );
   background-size: 400% 250%;
+
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
   border-radius: 15px;
+  cursor: pointer;
+  font-size: 17px;
   transition: 613ms;
+}
+
+.btn:hover {
+  transition: 613ms;
+
+  color: white;
   border: solid 1px white;
   background-position: bottom;
 }
 
-p.contentBoxText {
-  font-size: 35px;
+a {
+  color: #2196f3;
 }
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 767px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Styles for increment and decrement buttons */
+.increment-btn,
+.decrement-btn {
+  background-color: #ddd;
+  color: #555;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+.increment-btn:hover,
+.decrement-btn:hover {
+  background-color: #bbb;
+}
+
+/* Container for item links, buttons, and prices */
+.item-container {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+}
+
+/* Price styling */
+.price {
+  margin-left: auto; /* Push prices to the right */
+}
+
+/*TODO: -Try to make new branch if needed
+        -center things in header 
+        -add shopping cart icon  ✔️
+        -login/register (take from adVize)
+        -make gallery cuz ez if u get pics 
+        -make outline go away (border) on "Kuzen balıkçılık"  
+        -maybe change the logo a little in photoshop
+        -add all sites and header + scroll Button code
+        -remove logo bg
+          
+  */

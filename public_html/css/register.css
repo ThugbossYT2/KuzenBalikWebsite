@@ -5,9 +5,9 @@ html * {
 }
 
 /* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+    text-decoration: none;
+    color: black;
+  } */
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
 
@@ -18,7 +18,6 @@ a .sbtn {
     rgb(16, 2, 54),
     #0c7cde
   );
-  z-index: 5;
   background-size: 400% 250%;
   cursor: pointer;
   text-transform: lowercase;
@@ -53,7 +52,7 @@ body {
   background-position: center;
   background-attachment: fixed;
 
-  height: 3400px;
+  height: 2000px;
 }
 
 .menu-container {
@@ -73,6 +72,7 @@ body {
 .menu-logo {
   line-height: 0;
   margin: 0 0 0 0;
+  padding-right: 16px;
 }
 .Klogo {
   border: rgba(0, 0, 0, 0) solid !important;
@@ -165,20 +165,8 @@ body {
   font-size: 22px;
 }
 
-/* 
-for mobile styles MARK: MOBILE  
-*/
+/* mobile styles */
 @media only screen and (max-width: 767px) {
-  p.contentBoxText {
-    width: 300px;
-    font-size: 20px !important;
-  }
-  .carousel,
-  .carousel-inner,
-  .carousel-inner .item {
-    height: 30vh !important;
-    width: 30vh !important;
-  }
   #circle {
     display: none;
   }
@@ -187,11 +175,11 @@ for mobile styles MARK: MOBILE
     align-self: center;
     position: absolute;
     color: white;
-    font-size: 30px;
+    font-size: 3vh;
     border: none;
     top: 0px;
-    letter-spacing: 4px;
-    font-weight: bold;
+    letter-spacing: 0vw;
+    font-weight: 600;
   }
   body {
     background-image: none;
@@ -225,11 +213,14 @@ for mobile styles MARK: MOBILE
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
+    border: rgb(255, 255, 255) solid 1px;
+    border-top: rgb(0, 40, 87);
+    border-left: none;
   }
 
   .menu-logo {
     position: absolute;
-    right: 0px;
+    right: -1px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -268,36 +259,8 @@ for mobile styles MARK: MOBILE
   }
 }
 
-/* 
-for desktop styles MARK: DESKTOP
- */
+/* desktop styles */
 @media only screen and (min-width: 768px) {
-  p.contentBoxText {
-    padding-top: 0px !important;
-  }
-  #oltaBtn {
-    user-select: none;
-    left: 15vh !important;
-    top: 80%;
-  }
-  .button-container {
-    text-align: center; /* Center the button */
-    margin-top: 20px; /* Adjust margin as needed */
-    position: absolute;
-    top: 75%;
-    left: 57%;
-  }
-  .infoTable {
-    font-size: 30px;
-    height: 0px;
-    top: 80px;
-    position: relative;
-    margin-left: 100px !important;
-    margin-bottom: 110px !important;
-  }
-  .contentBox {
-    display: flex;
-  }
   #brForMobile {
     display: none;
   }
@@ -356,28 +319,26 @@ for desktop styles MARK: DESKTOP
     border: white solid 1px;
   }
 }
-/* MARK: contentBox
-*/
-p.contentBoxText {
+.contentBoxText p {
   font-size: 20px;
   font-weight: 600;
   z-index: 1;
-  user-select: text !important;
-  display: block;
+  user-select: "text";
 }
+
 .contentBox {
-  user-select: text !important;
+  user-select: "text";
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
   height: auto;
   position: absolute;
-  top: 55vh; /* Adjust the top position */
+  top: 56vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   border: solid rgb(255, 255, 255) 1px;
   padding: 20px;
-  padding-top: 50px; /* Add padding to the top */
+  padding-top: 10px;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -387,37 +348,39 @@ p.contentBoxText {
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
 
+.ss {
+  margin-bottom: 10px;
+}
+
+#tt {
+  font-size: 70px;
+  margin-left: 20px;
+}
 .contentBoxText {
-  padding-top: 10px; /* Add padding to the top */
-
-  font-size: 20px;
-  font-weight: bold;
-  z-index: 1;
-  user-select: text !important;
-  display: block;
-  text-align: center; /* Center the text horizontally */
-  margin: 0 auto 20px !important; /* Center the label vertically and add margin at the bottom */
-  position: absolute; /* Position the label absolutely */
-  top: 0; /* Position the label at the top of its containing element */
-  left: 50%; /* Move the label to the horizontal center */
-  transform: translateX(-50%); /* Adjust for horizontal centering */
+  text-align: center;
 }
 
-/* -----------------------MARK: image slideshow ----------------------- 
-*/
-
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-  height: 45vh;
-  width: 45vh;
+.WebsiteLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.WebsiteLinks a {
+  margin: 0 10px; /* Adjust margin as needed */
+}
+.labelMaxWidth {
+  width: auto;
+}
+
+.textbox {
+  margin-bottom: 10px;
+}
+
+/* -----------register form---------- */
 .Gbtn {
-  color: white;
-  font-weight: 500;
   width: 30vh;
-  font-size: 30px;
+  font-size: 20px;
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
@@ -443,7 +406,54 @@ p.contentBoxText {
   border: solid 1px white;
   background-position: bottom;
 }
+.borderRadius {
+  border-radius: 10px !important;
+  color: #595c5f;
+}
+.Ctb {
+  width: calc(
+    50% - 5px
+  ); /* Adjust width to accommodate both inputs with some spacing */
+  margin-right: 10px; /* Add margin between inputs */
+  border-radius: 10px !important;
+}
 
-p.contentBoxText {
-  font-size: 35px;
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Kerem touched here */
+
+.kayitCls {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+input {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.error-message {
+  display: none;
+  color: #cc0000;
+  font-size: 14px;
+  margin-top: -10px;
+}
+.container {
+  margin: -30px auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+select.ker {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }

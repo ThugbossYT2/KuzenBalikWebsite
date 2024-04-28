@@ -1,17 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
 html * {
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: rgb(16, 2, 54); */
 }
 
-/* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+.gallery-col {
+  padding: 10px;
+}
 
-a .btn {
+a .sbtn {
   background-image: linear-gradient(
     to bottom,
     #0c7cde,
@@ -36,11 +40,12 @@ a .btn {
   transform: translateY(0);
 }
 
-a .btn:hover {
+a .sbtn:hover {
   transition: 613ms;
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
   color: white;
+
   border: solid 1px white;
   background-position: bottom;
 }
@@ -56,23 +61,17 @@ body {
 }
 
 .menu-container {
+  border-bottom: solid white 1px;
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   color: #9b9b9b;
-  padding: 10px; /*FIXME*/
-  z-index: 1;
+  padding: 10px;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
   background-color: rgb(0, 40, 87);
-  /* background-image: linear-gradient(
-    to bottom,
-    rgb(0, 40, 87) 60%,
-    rgba(0, 134, 158, 0.692),
-    rgba(0, 0, 0, 0)
-  ); */
 }
 
 .menu-logo {
@@ -173,6 +172,12 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  .gallery-col {
+    padding: 15px;
+  }
+  #circle {
+    display: none;
+  }
   #mobileTitle {
     display: block;
     align-self: center;
@@ -216,12 +221,14 @@ body {
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
-    border: rgba(87, 0, 0, 0) solid 1px;
+    border: rgb(255, 255, 255) solid 1px;
+    border-top: rgb(0, 40, 87);
+    border-left: none;
   }
 
   .menu-logo {
     position: absolute;
-    right: -2vh;
+    right: -1px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -237,21 +244,17 @@ body {
 
   /* HBMenu */
   .menu {
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.548);
+    z-index: -2;
     position: absolute;
     box-sizing: border-box;
-    width: 240px;
+    width: 270px;
     left: -300px;
     top: 0;
     margin: -15px;
-    padding: 75px 50px 50px 60px;
+    padding: 100px 50px 10px 60px;
     background: rgb(0, 40, 87);
     border-radius: 0px 0px 50px 0px;
-    /* background-image: linear-gradient(
-      135deg,
-      rgb(0, 40, 87) 70%,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ); */
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -266,6 +269,16 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  .gallery-img:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+  .gallery-col {
+    padding: 20px;
+  }
+  #brForMobile {
+    display: none;
+  }
   #desktopTitle {
     color: white;
     font-size: 30px;
@@ -308,31 +321,11 @@ body {
     padding: 10 0;
   }
 
-  /* .menu li {
-    padding: 0 20px;
-    border-radius: 15px;
-    border: rgb(17, 2, 59) solid 2px;
-    margin: 2px;
-    background-image: linear-gradient(
-      to bottom,
-      #0c7cde,
-      rgb(16, 2, 54),
-      #0c7cde
-    );
-    background-size: 400% 250%;
-    transition: 0.3s;
-  } */
   .menu li {
     padding: 0 20px;
     border-radius: 15px;
     border: solid rgba(0, 41, 87, 0) 1px;
     margin: 2px;
-    /* background-image: linear-gradient(
-      to bottom,
-      #0c7cde,
-      rgb(16, 2, 54),
-      #0c7cde
-    ); */
     background-size: 400% 250%;
     transition: 0.5s;
   }
@@ -341,14 +334,30 @@ body {
     border: white solid 1px;
   }
 }
-/*TODO: -Try to make new branch if needed
-		    -center things in header 
-        -add shopping cart icon  ✔️
-        -login/register (take from adVize)
-        -make gallery cuz ez if u get pics 
-        -make outline go away (border) on "Kuzen balıkçılık"  
-        -maybe change the logo a little in photoshop
-        -add all sites and header + scroll Button code
-        -remove logo bg
-        
-*/
+.contentBoxText p {
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 1;
+  user-select: "text";
+}
+.contentBox div {
+  user-select: "text";
+  scroll-behavior: smooth;
+  background-color: rgb(0, 40, 87);
+  height: 200px;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 20px;
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: 1;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
+}
