@@ -172,6 +172,9 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  #mobileFishMargin {
+    margin-top: 100px;
+  }
   .gallery-col {
     padding: 15px;
   }
@@ -269,6 +272,9 @@ body {
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
+  #fishMargin {
+    margin-top: 150px;
+  }
   .gallery-img:hover {
     transition: 0.2s;
     transform: scale(1.1);
