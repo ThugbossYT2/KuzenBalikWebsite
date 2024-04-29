@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--  created with sitemap generator https://octopus.do  -->
+
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/index.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/sites/galeri.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/sites/iletisim.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/sites/login.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/sites/register.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://xn--kuzenbalk-2pb.store/sites/checkout.html</loc>
+        <lastmod>2024-04-29</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>
