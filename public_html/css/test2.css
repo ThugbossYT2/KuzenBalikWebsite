@@ -52,6 +52,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  height: 3400px;
 }
 
 .menu-container {
@@ -167,9 +169,6 @@ body {
 for mobile styles MARK: MOBILE  
 */
 @media only screen and (max-width: 767px) {
-  a .sbtn {
-    right: 5px !important;
-  }
   p.contentBoxText {
     width: 300px;
     font-size: 20px !important;
@@ -273,14 +272,6 @@ for mobile styles MARK: MOBILE
 for desktop styles MARK: DESKTOP
  */
 @media only screen and (min-width: 768px) {
-  #telNo {
-    position: absolute;
-    left: 35%;
-  }
-  #supportLink {
-    left: 50%;
-    position: absolute;
-  }
   p.contentBoxText {
     padding-top: 0px !important;
   }
@@ -423,7 +414,6 @@ p.contentBoxText {
 }
 
 .Gbtn {
-  user-select: none;
   color: white;
   font-weight: 500;
   width: 30vh;
@@ -459,16 +449,22 @@ p.contentBoxText {
 }
 
 /* ----------------- MARK: FOOTER --------------- */
-#fb {
-  margin-top: 430vh;
+
+.footerBox {
+  font-weight: initial;
+  border: none;
+  border-radius: 0px;
 }
 
+/*
 .site-footer {
-  background-color: #002857;
-  padding: 45px 0 20px;
-  font-size: 15px;
-  line-height: 24px;
-  color: #aaa9a9;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #02023a; 
+  padding: 20px 0;
+  color: white;
+  text-align: center;
 }
 .site-footer hr {
   border-top-color: #bbb;
@@ -485,7 +481,7 @@ p.contentBoxText {
   letter-spacing: 2px;
 }
 .site-footer a {
-  color: #aaa9a9;
+  color: #737373;
 }
 .site-footer a:hover {
   color: #3366cc;
@@ -499,7 +495,7 @@ p.contentBoxText {
   display: block;
 }
 .footer-links a {
-  color: #aaa9a9;
+  color: #737373;
 }
 .footer-links a:active,
 .footer-links a:focus,
@@ -574,7 +570,7 @@ p.contentBoxText {
 .social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
-  background-color: #002857;
+  background-color: #29aafe;
 }
 .social-icons.size-sm a {
   line-height: 34px;
@@ -585,42 +581,14 @@ p.contentBoxText {
 .social-icons a.facebook:hover {
   background-color: #3b5998;
 }
-.social-icons a.instagram:hover {
-  transition: all 0.2s linear;
-
-  background: #f09433;
-  background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+.social-icons a.twitter:hover {
+  background-color: #00aced;
 }
-.social-icons a.sahibinden:hover {
-  background-color: #dacb2d;
-  color: black;
+.social-icons a.linkedin:hover {
+  background-color: #007bb6;
 }
-.social-icons a.tiktok:hover {
-  background-image: linear-gradient(to bottom, #00efe8, #f7004d);
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89;
 }
 @media (max-width: 767px) {
   .social-icons li.title {
@@ -629,3 +597,4 @@ p.contentBoxText {
     font-weight: 600;
   }
 }
+*/

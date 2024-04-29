@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kuzen Balık, tutkulu balıkçılar için her şeyi sunan bir cennettir! Deneyimli bir ekip tarafından işletilen ve güvenilir bir kaynak olarak bilinen Kuzen Balık, en kaliteli rapalardan, balık malzemelerine, oltalardan, hatta özel olarak tasarlanmış güçlü olta motorlarına kadar her türlü ihtiyacınızı karşılar. Balık tutma performansınızı en üst düzeye çıkarmak için özenle seçilmiş sahte balık koleksiyonumuzla sizi bekliyoruz. Denizlerin ve nehirlerin gizemli dünyasına açılan kapınızı Kuzen Balık ile aralayın!"
+    />
+    <title>Kuzen Balıkçılık Checkout</title>
+    <!-- fonts awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <!-- tab icon -->
+    <link rel="shortcut icon" href="../media/images/KB_logo.png" />
+    <!-- my own fonts awesome -->
+    <script
+      src="https://kit.fontawesome.com/0d0b69111c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a href="#"><button class="sbtn">^</button></a>
+    <div id="background"></div>
+    <header class="header fixed-top">
+      <nav class="menu-container">
+        <!-- burger menu -->
+        <input type="checkbox" aria-label="Toggle menu" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <a for="mobileTitle" id="mobileTitle">Kuzen Balıkçılık</a>
+
+        <!-- logo -->
+        <a href="../index.html" class="menu-logo Klogo">
+          <img src="../media/images/KB_logo.png" alt="" />
+        </a>
+        <a href="../index.html" id="circle" class=".container text-center"
+          ><h3 id="desktopTitle" class="Klogo menu">Kuzen Balıkçılık</h3> </a
+        ><br id="brForMobile" />
+
+        <!-- menu items -->
+        <div class="menu">
+          <ul></ul>
+          <ul>
+            <li>
+              <a href="../index.html"> Anasayfa</a>
+            </li>
+            <li>
+              <a href="../sites/galeri.html"> Galeri </a>
+            </li>
+            <li>
+              <a href="../sites/iletisim.html"> İletişim </a>
+            </li>
+            <li>
+              <a href="../sites/login.html">Giriş Yap</a>
+            </li>
+            <li>
+              <a href="../sites/register.html"> Kayıt Ol </a>
+            </li>
+            <li style="border: white solid 1px">
+              <div>
+                <a
+                  id="onFocusMobile"
+                  href="../sites/checkout.html"
+                  class="cart"
+                >
+                  <img src="../media/images/cart.png" alt="" /><label
+                    for="checkout"
+                    id="checkoutLabel"
+                    >0</label
+                  >
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <br /><br /><br /><br /><br /><br /><br />
+    <div class="row">
+      <div class="col-75">
+        <div class="COcontainer">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-50">
+                <h3>Fatura Adresi</h3>
+                <label class="checkoutForm" for="fname"
+                  ><i class="fa fa-user"></i> Tam Ad</label
+                >
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Mr. Creamy"
+                />
+                <label class="checkoutForm" for="email"
+                  ><i class="fa fa-envelope"></i> E-posta</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="MrCreamy@gmail.com"
+                />
+                <label class="checkoutForm" for="adr"
+                  ><i class="fa fa-address-card-o"></i> Adres</label
+                >
+                <input
+                  type="text"
+                  id="adr"
+                  name="address"
+                  placeholder="542 sk. no.23"
+                />
+                <label class="checkoutForm" for="city"
+                  ><i class="fa fa-institution"></i> Şehir</label
+                >
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Antalya/Finike"
+                />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label class="checkoutForm" for="state">Eyalet</label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      placeholder="AYT"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label class="checkoutForm" for="zip">Posta Kodu</label>
+                    <input
+                      type="text"
+                      id="zip"
+                      name="zip"
+                      placeholder="70941"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>Ödeme</h3>
+                <label class="checkoutForm" class="input-label" for="fname"
+                  >Kabul Edilen Kartlar:</label
+                >
+                <div class="icon-container all-elements CardDiv" align="center">
+                  <i class="fa fa-cc-visa" style="color: navy"></i>
+                  <i class="fa fa-cc-amex" style="color: blue"></i>
+                  <i class="fa fa-cc-mastercard" style="color: red"></i>
+                  <i class="fa fa-cc-discover" style="color: orange"></i>
+                </div>
+                <label class="checkoutForm" for="cname"
+                  >Kart Üzerindeki İsim</label
+                >
+                <input
+                  type="text"
+                  id="cname"
+                  name="cardname"
+                  placeholder="Mr. Creamy"
+                />
+                <label class="checkoutForm" for="ccnum"
+                  >Kredi Kartı Numarası</label
+                >
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1111-2222-3333-4444"
+                />
+                <label class="checkoutForm" for="expmonth"
+                  >Son Kullanma Ayı</label
+                >
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="Eylül"
+                />
+                <div class="row">
+                  <div class="col-50">
+                    <label class="checkoutForm" for="expyear"
+                      >Son Kullanma Yılı</label
+                    >
+                    <input
+                      type="text"
+                      id="expyear"
+                      name="expyear"
+                      placeholder="2026"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label class="checkoutForm" for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="checkoutForm">
+              <input type="checkbox" checked="checked" name="sameadr" />
+              Kargo adresi fatura adresiyle aynı
+            </label>
+            <div align="center">
+              <input type="submit" value="Satın al" class="btn" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="COcontainer">
+          <h2>Sepet <i class="fa fa-shopping-cart"></i></h2>
+          <hr />
+          <p>
+            <a
+              href="#"
+              data-img="../media/images/blueGreenFFishNoBG.webp"
+              data-text=" "
+              >Sahte Balık</a
+            >
+            <span class="price">₺250</span>
+            <button class="increment-btn">+</button>
+            <span class="item-count">0</span>
+            <button class="decrement-btn">-</button>
+          </p>
+          <p>
+            <a
+              href="#"
+              data-img="../media/images/fishPack7NoBG.webp"
+              data-text=""
+              >7'li Sahte balık paketi
+            </a>
+            <span class="price">₺1500</span>
+            <button class="increment-btn">+</button>
+            <span class="item-count">0</span>
+            <button class="decrement-btn">-</button>
+          </p>
+          <p>
+            <a
+              href="#"
+              data-img="../media/images/redFF-removebg-preview.webp"
+              data-text=""
+              >Sahte Balık 26gr
+            </a>
+            <span class="price">₺350</span>
+            <button class="increment-btn">+</button>
+            <span class="item-count">0</span>
+            <button class="decrement-btn">-</button>
+          </p>
+          <p>
+            <a
+              href="#"
+              data-img="../media/images/whiteFF-removebg-preview.webp"
+              data-text=""
+              >Sahte Balık 10gr</a
+            >
+            <span class="price">₺250</span>
+            <button class="increment-btn">+</button>
+            <span class="item-count">0</span>
+            <button class="decrement-btn">-</button>
+          </p>
+
+          <hr />
+          <h4>
+            Toplam:
+            <span class="price" style="color: white">
+              <b class="total-price">₺0.00</b>
+            </span>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer" id="fb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Hakkımızda</h6>
+            <p class="text-justify">
+              <b>Kuzen Balık</b>, tutkulu balıkçılar için her şeyi sunan bir
+              cennettir! Deneyimli bir ekip tarafından işletilen ve güvenilir
+              bir kaynak olarak bilinen Kuzen Balık, en kaliteli rapalardan,
+              balık malzemelerine, oltalardan, hatta özel olarak tasarlanmış
+              güçlü olta motorlarına kadar her türlü ihtiyacınızı karşılar.
+              Balık tutma performansınızı en üst düzeye çıkarmak için özenle
+              seçilmiş sahte balık koleksiyonumuzla sizi bekliyoruz. Denizlerin
+              ve nehirlerin gizemli dünyasına açılan kapınızı Kuzen Balık ile
+              aralayın!
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Bağlantılar</h6>
+            <ul class="footer-links">
+              <li><a href="../index.html">Anasayfa</a></li>
+              <li>
+                <a href="galeri.html">Galeri</a>
+              </li>
+              <li>
+                <a href="iletisim.html">İletişim</a>
+              </li>
+              <li>
+                <a href="login.html">Giriş Yap</a>
+              </li>
+              <li>
+                <a href="register.html">Kayıt Ol</a>
+              </li>
+
+              <li>
+                <a href="checkout.html">Sepet</a>
+              </li>
+              <li>
+                <a href="sitemap.xml">Site Haritası</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Site Yapımcıları</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="https://github.com/ThugbossYT2"
+                  ><i class="fa-brands fa-github"></i> Hamza Tural</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Folture"
+                  ><i class="fa-brands fa-github"></i>Kerem Tamkoç</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Site sahipleri</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">Murat Tamkoç</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kerem-tamko%C3%A7-3a8529295/"
+                  ><i
+                    style="text-decoration: none"
+                    class="fa-brands fa-linkedin-in"
+                  ></i
+                  >Kerem Tamkoç</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/hamza-tural-95609b29a/"
+                  ><i
+                    style="text-decoration: none"
+                    class="fa-brands fa-linkedin-in"
+                  ></i>
+                  Hamza Tural</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              <a href="#">&copy;Kuzenbalık</a> tüm hakları saklıdır.
+              <a id="supportLink" href="mailto:info@kuzenbalık.store"
+                >info@kuzenbalık.store</a
+              ><a id="telNo" style="text-decoration: none">
+                0 (506) 627 34 52</a
+              >
+            </p>
+          </div>
+
+          <!-- <div class="col-md-8 col-sm-6 col-xs-12" align="center">
+            <p class="copyright-text">
+              <a href="#">&copy;Kuzenbalık</a>'ın tüm hakları saklıdır.
+            </p>
+          </div> -->
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a
+                  class="facebook"
+                  href="https://www.facebook.com/murat.tamkoc.754"
+                >
+                  <i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="instagram"
+                  href="https://www.instagram.com/kuzenbalik?igsh=cGx5bThzY2lzdzgy"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a class="tiktok" href="https://www.tiktok.com/@murat_tamkoc"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="sahibinden"
+                  style="text-decoration: none"
+                  href="https://www.sahibinden.com/arama?userId=awWO9MJmm0Wc9xcmrX375lQ"
+                  ><b>S</b></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" style="display: none"></div>
+
+    <script src="../js/checkout.js" type="text/javascript"></script>
+  </body>
+</html>
