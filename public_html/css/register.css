@@ -454,6 +454,16 @@ select.ker {
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
+.nana {
+  font-size: 15px;
+}
+a.nana {
+  color: #818a91;
+}
+a.nana:hover {
+  text-decoration: none;
+  color: #3366cc;
+}
 
 /* ----------------- MARK: FOOTER --------------- */
 #fb {
