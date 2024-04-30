@@ -1,9 +1,11 @@
-$(document).ready(function () {
-  $(".Gbtn").click(function () {
-    var currentValue = parseInt($("#checkoutLabel").text());
+const acceptButton = document.getElementById("acceptButton");
+const popup = document.getElementById("popup");
 
-    var newValue = currentValue + 1;
+acceptButton.addEventListener("click", function () {
+  const video = document.getElementById("vidauto");
 
-    $("#checkoutLabel").text(newValue);
-  });
+  video.muted = false;
+  video.play();
+
+  popup.style.display = "none";
 });

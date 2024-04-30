@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
 html * {
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: rgb(16, 2, 54); */
 }
 
-/* .blankLink{
-  text-decoration: none;
-  color: black;
-} */
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+.gallery-col {
+  padding: 10px;
+}
 
 a .sbtn {
   background-image: linear-gradient(
@@ -18,7 +22,6 @@ a .sbtn {
     rgb(16, 2, 54),
     #0c7cde
   );
-  z-index: 5;
   background-size: 400% 250%;
   cursor: pointer;
   text-transform: lowercase;
@@ -42,6 +45,7 @@ a .sbtn:hover {
   padding: 7px 20px 1px 20px;
   transform: translateY(-18px);
   color: white;
+
   border: solid 1px white;
   background-position: bottom;
 }
@@ -52,6 +56,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  height: 3000px;
 }
 
 .menu-container {
@@ -71,6 +77,7 @@ body {
 .menu-logo {
   line-height: 0;
   margin: 0 0 0 0;
+  padding-right: 16px;
 }
 .Klogo {
   border: rgba(0, 0, 0, 0) solid !important;
@@ -163,22 +170,18 @@ body {
   font-size: 22px;
 }
 
-/* 
-for mobile styles MARK: MOBILE  
-*/
+/* mobile styles */
 @media only screen and (max-width: 767px) {
-  a .sbtn {
-    right: 5px !important;
+  #vidauto {
+    width: 150px !important;
+    margin-left: 20px;
   }
-  p.contentBoxText {
-    width: 300px;
-    font-size: 20px !important;
+
+  #mobileFishMargin {
+    margin-top: 100px;
   }
-  .carousel,
-  .carousel-inner,
-  .carousel-inner .item {
-    height: 30vh !important;
-    width: 30vh !important;
+  .gallery-col {
+    padding: 15px;
   }
   #circle {
     display: none;
@@ -226,11 +229,14 @@ for mobile styles MARK: MOBILE
   .menu-container {
     flex-direction: column;
     align-items: flex-start;
+    border: rgb(255, 255, 255) solid 1px;
+    border-top: rgb(0, 40, 87);
+    border-left: none;
   }
 
   .menu-logo {
     position: absolute;
-    right: 0px;
+    right: -1px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -269,43 +275,17 @@ for mobile styles MARK: MOBILE
   }
 }
 
-/* 
-for desktop styles MARK: DESKTOP
- */
+/* desktop styles */
 @media only screen and (min-width: 768px) {
-  #telNo {
-    position: absolute;
-    left: 35%;
+  #fishMargin {
+    margin-top: 150px;
   }
-  #supportLink {
-    left: 50%;
-    position: absolute;
+  .gallery-img:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
   }
-  p.contentBoxText {
-    padding-top: 0px !important;
-  }
-  #oltaBtn {
-    user-select: none;
-    left: 15vh !important;
-    top: 80%;
-  }
-  .button-container {
-    text-align: center; /* Center the button */
-    margin-top: 20px; /* Adjust margin as needed */
-    position: absolute;
-    top: 75%;
-    left: 57%;
-  }
-  .infoTable {
-    font-size: 30px;
-    height: 0px;
-    top: 80px;
-    position: relative;
-    margin-left: 100px !important;
-    margin-bottom: 110px !important;
-  }
-  .contentBox {
-    display: flex;
+  .gallery-col {
+    padding: 20px;
   }
   #brForMobile {
     display: none;
@@ -365,28 +345,25 @@ for desktop styles MARK: DESKTOP
     border: white solid 1px;
   }
 }
-/* MARK: contentBox
-*/
-p.contentBoxText {
+.contentBoxText p {
   font-size: 20px;
   font-weight: 600;
   z-index: 1;
-  user-select: text !important;
-  display: block;
+  user-select: "text";
 }
-.contentBox {
-  user-select: text !important;
+.contentBox div {
+  user-select: "text";
   scroll-behavior: smooth;
   background-color: rgb(0, 40, 87);
-  height: auto;
+  height: 200px;
   position: absolute;
-  top: 55vh; /* Adjust the top position */
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   border: solid rgb(255, 255, 255) 1px;
   padding: 20px;
-  padding-top: 50px; /* Add padding to the top */
+  padding-top: 10px;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -396,70 +373,9 @@ p.contentBoxText {
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.548);
 }
 
-.contentBoxText {
-  padding-top: 10px; /* Add padding to the top */
-
-  font-size: 20px;
-  font-weight: bold;
-  z-index: 1;
-  user-select: text !important;
-  display: block;
-  text-align: center; /* Center the text horizontally */
-  margin: 0 auto 20px !important; /* Center the label vertically and add margin at the bottom */
-  position: absolute; /* Position the label absolutely */
-  top: 0; /* Position the label at the top of its containing element */
-  left: 50%; /* Move the label to the horizontal center */
-  transform: translateX(-50%); /* Adjust for horizontal centering */
-}
-
-/* -----------------------MARK: image slideshow ----------------------- 
-*/
-
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-  height: 45vh;
-  width: 45vh;
-}
-
-.Gbtn {
-  color: white;
-  font-weight: 500;
-  width: 30vh;
-  font-size: 30px;
-  background-image: linear-gradient(
-    to bottom,
-    #0c7cde,
-    rgb(16, 2, 54),
-    #0c7cde
-  );
-  background-size: 400% 250%;
-  border-radius: 15px;
-  transition: 613ms;
-  border: solid rgba(255, 255, 255, 0) 1px;
-}
-
-.Gbtn:hover {
-  background-image: linear-gradient(
-    to bottom,
-    #0c7cde,
-    rgb(16, 2, 54),
-    #0c7cde
-  );
-  background-size: 400% 250%;
-  border-radius: 15px;
-  transition: 613ms;
-  border: solid 1px white;
-  background-position: bottom;
-}
-
-p.contentBoxText {
-  font-size: 35px;
-}
-
 /* ----------------- MARK: FOOTER --------------- */
 #fb {
-  margin-top: 430vh;
+  margin-top: 40vh;
 }
 
 .site-footer {
@@ -628,3 +544,62 @@ p.contentBoxText {
     font-weight: 600;
   }
 }
+
+/* .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+} */
+
+/* #liNothing {
+  border: solid rgba(0, 41, 87, 0) !important;
+  padding: 10px 0;
+  margin: 2px;
+}
+#liNothing:hover {
+  border: solid rgba(0, 41, 87, 0) !important;
+  padding: 10px 0;
+  margin: 2px;
+}
+#vidauto {
+  height: 10px;
+  width: 10px;
+}
+audio::-webkit-media-controls-mute-button {
+  background-color: #851b8f;
+  color: rgb(255, 255, 255);
+  border: solid green 10px;
+}
+audio::-webkit-media-controls-play-button {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  background-position: top;
+  transition: 15s;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-position: bottom;
+}
+audio::-webkit-media-controls-panel {
+  background-color: #002857;
+  color: white;
+  border: solid rgb(0, 128, 28) 10px;
+}
+audio {
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+} */

@@ -34,7 +34,7 @@
   </head>
   <body>
     <div id="background"></div>
-    <header class="header fixed-top">
+    <header class="header sticky-top">
       <nav class="menu-container">
         <!-- burger menu -->
         <input type="checkbox" aria-label="Toggle menu" />
@@ -91,30 +91,32 @@
         <p class="contentBoxText"></p>
 
         <div align="center">
-          <input
-            required
-            autofocus
-            class="form-control labelMaxWidth ss"
-            placeholder="Adınız Soyadınız"
-            type="text"
-          />
-          <input
-            required
-            class="form-control labelMaxWidth ss"
-            placeholder="E-Mail Adresiniz"
-            type="email"
-          />
-          <textarea
-            placeholder="Mesaj Yazınız..."
-            class="form-control labelMaxWidth ss"
-            style="height: 150px"
-          ></textarea>
+          <form action="action_page.php">
+            <input
+              required
+              autofocus
+              class="form-control labelMaxWidth ss"
+              placeholder="Adınız Soyadınız"
+              type="text"
+            />
+            <input
+              required
+              class="form-control labelMaxWidth ss"
+              placeholder="E-Mail Adresiniz"
+              type="email"
+            />
+            <textarea
+              placeholder="Mesaj Yazınız..."
+              class="form-control labelMaxWidth ss"
+              style="height: 150px"
+            ></textarea>
 
-          <a
-            ><button type="submit" class="btn btn-primary Gbtn">
-              Gönder
-            </button></a
-          >
+            <a
+              ><button type="submit" class="btn btn-primary Gbtn">
+                Gönder
+              </button></a
+            >
+          </form>
         </div>
       </div>
     </div>
