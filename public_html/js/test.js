@@ -6,6 +6,7 @@ acceptButton.addEventListener("click", function () {
 
   video.muted = false;
   video.play();
+  video.volume = 0.3;
 
   popup.style.display = "none";
 });
