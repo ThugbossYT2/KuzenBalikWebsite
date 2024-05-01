@@ -172,6 +172,11 @@ body {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+  #vidauto {
+    width: 150px !important;
+    margin-left: 20px;
+  }
+
   #mobileFishMargin {
     margin-top: 100px;
   }
@@ -539,3 +544,98 @@ body {
     font-weight: 600;
   }
 }
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 9999; /* ensure it's above other elements */
+}
+.popup {
+  color: white;
+  background-color: #002857;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+  text-align: center;
+  z-index: 9999;
+}
+.Gbtn {
+  margin: 5px;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid rgba(255, 255, 255, 0) 1px;
+}
+
+.Gbtn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  border-radius: 15px;
+  transition: 613ms;
+  border: solid 1px white;
+  background-position: bottom;
+}
+/* #liNothing {
+  border: solid rgba(0, 41, 87, 0) !important;
+  padding: 10px 0;
+  margin: 2px;
+}
+#liNothing:hover {
+  border: solid rgba(0, 41, 87, 0) !important;
+  padding: 10px 0;
+  margin: 2px;
+}
+#vidauto {
+  height: 10px;
+  width: 10px;
+}
+audio::-webkit-media-controls-mute-button {
+  background-color: #851b8f;
+  color: rgb(255, 255, 255);
+  border: solid green 10px;
+}
+audio::-webkit-media-controls-play-button {
+  background-image: linear-gradient(
+    to bottom,
+    #0c7cde,
+    rgb(16, 2, 54),
+    #0c7cde
+  );
+  background-size: 400% 250%;
+  background-position: top;
+  transition: 15s;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-position: bottom;
+}
+audio::-webkit-media-controls-panel {
+  background-color: #002857;
+  color: white;
+  border: solid rgb(0, 128, 28) 10px;
+}
+audio {
+  border-radius: 15px;
+  border: solid rgb(255, 255, 255) 1px;
+} */

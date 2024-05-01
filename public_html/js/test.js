@@ -1,12 +1,35 @@
-const acceptButton = document.getElementById("acceptButton");
-const popup = document.getElementById("popup");
+$(document).ready(function () {
+  const acceptButton = $("#acceptButton");
+  const declineButton = $("#declineButton");
+  const popup = $("#popup");
+  const video = $("#vidauto")[0];
+  const overlay = $("#overlay");
 
-acceptButton.addEventListener("click", function () {
-  const video = document.getElementById("vidauto");
+  popup.hide();
+  overlay.hide();
 
-  video.muted = false;
-  video.play();
-  video.volume = 0.3;
+  setTimeout(function () {
+    popup.slideDown();
+    overlay.show();
+  }, 200);
 
-  popup.style.display = "none";
+  acceptButton.addClass("Gbtn");
+  declineButton.addClass("Gbtn");
+
+  acceptButton.on("click", function () {
+    video.muted = false;
+    video.play();
+    video.volume = 0.3;
+    popup.slideUp();
+    overlay.hide();
+  });
+
+  declineButton.on("click", function () {
+    video.muted = true;
+    video.pause();
+    video.currentTime = 0;
+    video.volume = 0.3;
+    popup.slideUp();
+    overlay.hide();
+  });
 });
