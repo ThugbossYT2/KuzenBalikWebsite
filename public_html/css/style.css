@@ -167,6 +167,12 @@ body {
 for mobile styles MARK: MOBILE  
 */
 @media only screen and (max-width: 767px) {
+  #oltaBox {
+    margin-top: 250px !important;
+  }
+  .contentBox {
+    margin: 50px 0px !important;
+  }
   a .sbtn {
     right: 5px !important;
   }
