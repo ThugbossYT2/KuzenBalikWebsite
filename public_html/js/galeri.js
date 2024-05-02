@@ -1,10 +1,15 @@
 $(document).ready(function () {
+  
+  
+
   const acceptButton = $("#acceptButton");
   const declineButton = $("#declineButton");
   const popup = $("#popup");
   const video = $("#vidauto")[0];
   const overlay = $("#overlay");
 
+
+  
   popup.hide();
   overlay.hide();
 
@@ -31,5 +36,10 @@ $(document).ready(function () {
     video.volume = 0.3;
     popup.slideUp();
     overlay.hide();
+  });
+  var images = [];
+  $.each(preload, function(i, val) {
+      images[i] = new Image();
+      images[i].src = val;
   });
 });
