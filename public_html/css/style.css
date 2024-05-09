@@ -428,6 +428,15 @@ p.contentBoxText {
   width: 45vh;
 }
 
+agag {
+  .carousel,
+  .carousel-inner,
+  .carousel-inner .item {
+    height: 45vh;
+    width: 100vh;
+  }
+}
+
 .Gbtn {
   user-select: none;
   color: white;
@@ -633,5 +642,31 @@ p.contentBoxText {
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+
+.gradiantA {
+  background: rgb(1, 26, 55);
+  background: linear-gradient(
+    to bottom right,
+    rgba(1, 26, 55, 1) 0%,
+    rgba(45, 128, 241, 1) 25%,
+    rgba(0, 11, 48, 1) 49%,
+    rgba(0, 96, 255, 1) 73%,
+    rgba(0, 45, 120, 1) 91%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
