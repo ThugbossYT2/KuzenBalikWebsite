@@ -89,6 +89,7 @@
         <form>
           <div class="input-group">
             <input
+              autofocus
               required
               type="text"
               class="form-control textbox Ctb"
@@ -135,7 +136,7 @@
           <hr />
 
           <div class="input-group">
-            <select id="Iller" class="form-control borderRadius">
+            <select id="Iller" class="form-control borderRadius" required>
               <option value="0">Lütfen Bir İl Seçiniz</option>
             </select>
           </div>
@@ -143,6 +144,7 @@
           <!-- <label for="ilce">İlçe:</label> -->
 
           <select
+            required
             id="Ilceler"
             disabled="disabled"
             class="form-control borderRadius"
@@ -152,6 +154,7 @@
           <hr />
 
           <select
+            required
             class="form-control borderRadius"
             required
             placeholder="cinsiyet"
