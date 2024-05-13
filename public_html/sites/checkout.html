@@ -98,200 +98,190 @@
       </nav>
     </header>
     <br /><br /><br /><br /><br /><br /><br />
-    <div class="row">
-      <div class="col-75">
-        <div class="COcontainer">
-          <form action="/action_page.php">
-            <div class="row">
-              <div class="col-50">
-                <h3>Fatura Adresi</h3>
-                <label class="checkoutForm" for="fname"
-                  ><i class="fa fa-user"></i> Tam Ad</label
-                >
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Mr. Creamy"
-                />
-                <label class="checkoutForm" for="email"
-                  ><i class="fa fa-envelope"></i> E-posta</label
-                >
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="MrCreamy@gmail.com"
-                />
-                <label class="checkoutForm" for="adr"
-                  ><i class="fa fa-address-card-o"></i> Adres</label
-                >
-                <input
-                  type="text"
-                  id="adr"
-                  name="address"
-                  placeholder="542 sk. no.23"
-                />
-                <label class="checkoutForm" for="city"
-                  ><i class="fa fa-institution"></i> Şehir</label
-                >
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  placeholder="Antalya/Finike"
-                />
+    <div class="col-75">
+      <div class="COcontainer">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-50">
+              <h3>Fatura Adresi</h3>
+              <label class="checkoutForm" for="fname"
+                ><i class="fa fa-user"></i> Tam Ad</label
+              >
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Mr. Creamy"
+              />
+              <label class="checkoutForm" for="email"
+                ><i class="fa fa-envelope"></i> E-posta</label
+              >
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="MrCreamy@gmail.com"
+              />
+              <label class="checkoutForm" for="adr"
+                ><i class="fa fa-address-card-o"></i> Adres</label
+              >
+              <input
+                type="text"
+                id="adr"
+                name="address"
+                placeholder="542 sk. no.23"
+              />
+              <label class="checkoutForm" for="city"
+                ><i class="fa fa-institution"></i> Şehir</label
+              >
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Antalya/Finike"
+              />
 
-                <div class="row">
-                  <div class="col-50">
-                    <label class="checkoutForm" for="state">Eyalet</label>
-                    <input
-                      type="text"
-                      id="state"
-                      name="state"
-                      placeholder="AYT"
-                    />
-                  </div>
-                  <div class="col-50">
-                    <label class="checkoutForm" for="zip">Posta Kodu</label>
-                    <input
-                      type="text"
-                      id="zip"
-                      name="zip"
-                      placeholder="70941"
-                    />
-                  </div>
+              <div class="row">
+                <div class="col-50">
+                  <label class="checkoutForm" for="state">Eyalet</label>
+                  <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    placeholder="AYT"
+                  />
                 </div>
-              </div>
-
-              <div class="col-50">
-                <h3>Ödeme</h3>
-                <label class="checkoutForm" class="input-label" for="fname"
-                  >Kabul Edilen Kartlar:</label
-                >
-                <div class="icon-container all-elements CardDiv" align="center">
-                  <i class="fa fa-cc-visa" style="color: navy"></i>
-                  <i class="fa fa-cc-amex" style="color: blue"></i>
-                  <i class="fa fa-cc-mastercard" style="color: red"></i>
-                  <i class="fa fa-cc-discover" style="color: orange"></i>
-                </div>
-                <label class="checkoutForm" for="cname"
-                  >Kart Üzerindeki İsim</label
-                >
-                <input
-                  type="text"
-                  id="cname"
-                  name="cardname"
-                  placeholder="Mr. Creamy"
-                />
-                <label class="checkoutForm" for="ccnum"
-                  >Kredi Kartı Numarası</label
-                >
-                <input
-                  type="text"
-                  id="ccnum"
-                  name="cardnumber"
-                  placeholder="1111-2222-3333-4444"
-                />
-                <label class="checkoutForm" for="expmonth"
-                  >Son Kullanma Ayı</label
-                >
-                <input
-                  type="text"
-                  id="expmonth"
-                  name="expmonth"
-                  placeholder="Eylül"
-                />
-                <div class="row">
-                  <div class="col-50">
-                    <label class="checkoutForm" for="expyear"
-                      >Son Kullanma Yılı</label
-                    >
-                    <input
-                      type="text"
-                      id="expyear"
-                      name="expyear"
-                      placeholder="2026"
-                    />
-                  </div>
-                  <div class="col-50">
-                    <label class="checkoutForm" for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="352" />
-                  </div>
+                <div class="col-50">
+                  <label class="checkoutForm" for="zip">Posta Kodu</label>
+                  <input type="text" id="zip" name="zip" placeholder="70941" />
                 </div>
               </div>
             </div>
-            <label class="checkoutForm">
-              <input type="checkbox" checked="checked" name="sameadr" />
-              Kargo adresi fatura adresiyle aynı
-            </label>
-            <div align="center">
-              <input type="submit" value="Satın al" class="btn" />
+
+            <div class="col-50">
+              <h3>Ödeme</h3>
+              <label class="checkoutForm" class="input-label" for="fname"
+                >Kabul Edilen Kartlar:</label
+              >
+              <div class="icon-container all-elements CardDiv" align="center">
+                <i class="fa fa-cc-visa" style="color: navy"></i>
+                <i class="fa fa-cc-amex" style="color: blue"></i>
+                <i class="fa fa-cc-mastercard" style="color: red"></i>
+                <i class="fa fa-cc-discover" style="color: orange"></i>
+              </div>
+              <label class="checkoutForm" for="cname"
+                >Kart Üzerindeki İsim</label
+              >
+              <input
+                type="text"
+                id="cname"
+                name="cardname"
+                placeholder="Mr. Creamy"
+              />
+              <label class="checkoutForm" for="ccnum"
+                >Kredi Kartı Numarası</label
+              >
+              <input
+                type="text"
+                id="ccnum"
+                name="cardnumber"
+                placeholder="1111-2222-3333-4444"
+              />
+              <label class="checkoutForm" for="expmonth"
+                >Son Kullanma Ayı</label
+              >
+              <input
+                type="text"
+                id="expmonth"
+                name="expmonth"
+                placeholder="Eylül"
+              />
+              <div class="row">
+                <div class="col-50">
+                  <label class="checkoutForm" for="expyear"
+                    >Son Kullanma Yılı</label
+                  >
+                  <input
+                    type="text"
+                    id="expyear"
+                    name="expyear"
+                    placeholder="2026"
+                  />
+                </div>
+                <div class="col-50">
+                  <label class="checkoutForm" for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352" />
+                </div>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+          <label class="checkoutForm">
+            <input type="checkbox" checked="checked" name="sameadr" />
+            Kargo adresi fatura adresiyle aynı
+          </label>
+          <div align="center">
+            <input type="submit" value="Satın al" class="btn" />
+          </div>
+        </form>
       </div>
-      <div class="col-25">
-        <div class="COcontainer">
-          <h2>Sepet <i class="fa fa-shopping-cart"></i></h2>
-          <hr />
-          <p>
-            <a
-              href="#"
-              data-img="../media/images/blueGreenFFishNoBG.webp"
-              data-text=" "
-              >Sahte Balık</a
-            >
-            <span class="price">₺250</span>
-            <button class="increment-btn">+</button>
-            <span class="item-count">0</span>
-            <button class="decrement-btn">-</button>
-          </p>
-          <p>
-            <a
-              href="#"
-              data-img="../media/images/fishPack7NoBG.webp"
-              data-text=""
-              >7'li Sahte balık paketi
-            </a>
-            <span class="price">₺1500</span>
-            <button class="increment-btn">+</button>
-            <span class="item-count">0</span>
-            <button class="decrement-btn">-</button>
-          </p>
-          <p>
-            <a
-              href="#"
-              data-img="../media/images/redFF-removebg-preview.webp"
-              data-text=""
-              >Sahte Balık 26gr
-            </a>
-            <span class="price">₺350</span>
-            <button class="increment-btn">+</button>
-            <span class="item-count">0</span>
-            <button class="decrement-btn">-</button>
-          </p>
-          <p>
-            <a
-              href="#"
-              data-img="../media/images/whiteFF-removebg-preview.webp"
-              data-text=""
-              >Sahte Balık 10gr</a
-            >
-            <span class="price">₺250</span>
-            <button class="increment-btn">+</button>
-            <span class="item-count">0</span>
-            <button class="decrement-btn">-</button>
-          </p>
+    </div>
+    <div class="col-25">
+      <div class="COcontainer">
+        <h2>Sepet <i class="fa fa-shopping-cart"></i></h2>
+        <hr />
+        <p>
+          <a
+            href="#"
+            data-img="../media/images/blueGreenFFishNoBG.webp"
+            data-text=" "
+            >Sahte Balık</a
+          >
+          <span class="price">₺250</span>
+          <button class="increment-btn">+</button>
+          <span class="item-count">0</span>
+          <button class="decrement-btn">-</button>
+        </p>
+        <p>
+          <a href="#" data-img="../media/images/fishPack7NoBG.webp" data-text=""
+            >7'li Sahte balık paketi
+          </a>
+          <span class="price">₺1500</span>
+          <button class="increment-btn">+</button>
+          <span class="item-count">0</span>
+          <button class="decrement-btn">-</button>
+        </p>
+        <p>
+          <a
+            href="#"
+            data-img="../media/images/redFF-removebg-preview.webp"
+            data-text=""
+            >Sahte Balık 26gr
+          </a>
+          <span class="price">₺350</span>
+          <button class="increment-btn">+</button>
+          <span class="item-count">0</span>
+          <button class="decrement-btn">-</button>
+        </p>
+        <p>
+          <a
+            href="#"
+            data-img="../media/images/whiteFF-removebg-preview.webp"
+            data-text=""
+            >Sahte Balık 10gr</a
+          >
+          <span class="price">₺250</span>
+          <button class="increment-btn">+</button>
+          <span class="item-count">0</span>
+          <button class="decrement-btn">-</button>
+        </p>
 
-          <hr />
-          <h4>
-            Toplam:
-            <span class="price" style="color: white">
-              <b class="total-price">₺0.00</b>
-            </span>
-          </h4>
-        </div>
+        <hr />
+        <h4>
+          Toplam:
+          <span class="price" style="color: white">
+            <b class="total-price">₺0.00</b>
+          </span>
+        </h4>
       </div>
     </div>
     <footer class="site-footer" id="fb">
